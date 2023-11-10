@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('homes', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('type');
+            $table->boolean('visibility');
             $table->string('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
