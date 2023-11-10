@@ -11,6 +11,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,60 +28,73 @@ class HomeResource extends Resource
     {
         return $form
             ->schema([
-                Section::make('Details')->schema([
-                    Forms\Components\TextInput::make('title')
-                        ->required()
-                        ->maxLength(255),
-                    Forms\Components\Select::make('type')
-                        ->options([
-                            "banner" => "Banner",
-                            "feature" => "Feature",
-                        ])
-                        ->native(false)
-                        ->required(),
-                    Forms\Components\Textarea::make('description')
-                        ->required()
-                        ->columnSpanFull()
-                        ->maxLength(255),
-                ])->columns(2),
-                Section::make('Image')->schema([
-                    Forms\Components\FileUpload::make('image')
-                        ->label('Upload Image')
-                        ->image()
-                        ->required(),
-                ])
-            ]);
+                Group::make()->schema([
+                    Section::make('Details')->schema([
+                        Forms\Components\TextInput::make('title')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('type')
+                            ->default('feature')
+                            ->disabled()
+                            ->dehydrated(),
+                        Forms\Components\Textarea::make('description')
+                            ->columnSpanFull()
+                            ->maxLength(255),
+                    ])->columns(2),
+                    Section::make('Image')->schema([
+                        Forms\Components\FileUpload::make('image')
+                            ->label('Upload Image')
+                            ->image()
+                            ->required(),
+                    ]),
+                ])->columnSpan(2),
+                Group::make()->schema([
+                    Section::make('Status')->schema([
+                        Forms\Components\Radio::make('visibility')
+                            ->options([
+                                "true" => "True",
+                                "false" => "False",
+                            ])
+                            ->boolean()
+                            ->required(),
+                    ])
+                ])->columnSpan(1),
+            ])->columns(3);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('type')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('description')->limit(20),
+                Tables\Columns\TextColumn::make('type')->badge(),
+                Tables\Columns\IconColumn::make('visibility')
+                    ->alignCenter()
+                    ->boolean(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                Tables\Filters\TrashedFilter::make()->native(false),
+                Tables\Filters\TernaryFilter::make('visibility')->native(false),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                ActionGroup::make([
+                    Tables\Actions\ViewAction::make()->color('success'),
+                    Tables\Actions\EditAction::make()->color('primary'),
+                    Tables\Actions\DeleteAction::make()->disabled(fn (Home $record) => ($record->type == 'banner' || 'reserve section')),
+                    Tables\Actions\RestoreAction::make(),
+                ])->icon('heroicon-m-ellipsis-horizontal')
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\RestoreBulkAction::make('restore'),
                 ]),
             ]);
     }
@@ -99,5 +113,13 @@ class HomeResource extends Resource
             'create' => Pages\CreateHome::route('/create'),
             'edit' => Pages\EditHome::route('/{record}/edit'),
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+            ]);
     }
 }
