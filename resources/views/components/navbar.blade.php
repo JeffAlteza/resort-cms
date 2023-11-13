@@ -1,6 +1,6 @@
 <div class="navbar" id="navbar">
-  <div class="max-w-screen-xl mx-auto flex justify-between items-center p-3">
-    <a href="#" class="text-2xl font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">{{ env('APP_NAME')}}</a>
+  <div class="max-w-screen-xl mx-auto flex justify-between items-center p-3" style="text-shadow: 0.5px 0.5px 0.5px rgb(150, 150, 150);">
+    <a href="#" class="text-2xl font-semibold tracking-widest text-white uppercase">{{ env('APP_NAME')}}</a>
     <nav class="flex">
       <a href="#" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Blog</a>
       <a href="#" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Feature</a>
