@@ -16,3 +16,9 @@
         }
     });
 </script>
+<script>
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("mobile-menu-open");
+    }
+</script>
