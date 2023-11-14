@@ -17,9 +17,14 @@ class HomeController extends Controller
     {
 
         $home = Home::where('type', 'banner')->first();
-
+        $features = Home::where('type', 'feature')->get();
+//         foreach ($features as $fe) {
+//             dump($fe->image);
+//         }
+// dd('done');
         return [
             'homeData' => $home,
+            'featureDatas' => $features,
         ];
     }
 }

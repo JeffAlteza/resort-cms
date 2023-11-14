@@ -15,6 +15,10 @@
         @include('pages.home.section.landing')
     </section>
 
+    <section>
+        @include('pages.home.section.feature')
+    </section>
+
     @include('components.script')
 </body>
 
