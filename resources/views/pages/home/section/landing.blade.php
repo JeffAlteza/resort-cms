@@ -6,7 +6,7 @@
 
         <p data-aos="fade-up" data-aos-duration="1600"  style="text-shadow: 1px 1px 2px rgb(100, 100, 100);" class="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48">{{ $homeData['description'] }}</p>
 
-        <a href="#" data-aos="fade-up" data-aos-duration="1700" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+        <a href="#next" data-aos="fade-up" data-aos-duration="1700" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
             Learn More
         </a>  
     </div>

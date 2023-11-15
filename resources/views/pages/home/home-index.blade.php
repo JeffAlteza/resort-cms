@@ -15,7 +15,7 @@
         @include('pages.home.section.landing')
     </section>
 
-    <section>
+    <section id="next">
         @include('pages.home.section.feature')
     </section>
 
