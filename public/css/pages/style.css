@@ -18,7 +18,7 @@ body {
 
 .navbar.scrolled {
     background-color: white;
-    color: #1B1C1E;
+    color: #1b1c1e;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolled */
 }
 
@@ -31,7 +31,7 @@ body {
 
 .navbar a:hover,
 .navbar a:focus {
-    color: #1B1C1E;
+    color: #1b1c1e;
 }
 
 .content {
@@ -59,7 +59,7 @@ body {
     }
 
     .bar {
-        background-color: #1B1C1E;
+        background-color: #1b1c1e;
     }
 
     #nav-links {
@@ -84,7 +84,7 @@ body {
         position: fixed;
         background-color: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for mobile view */
-        color: #1B1C1E;
+        color: #1b1c1e;
     }
 
     .navbar.scrolled {

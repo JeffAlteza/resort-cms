@@ -18,8 +18,8 @@
         <div style="color: #1f1f1f" class="md:w-1/2 flex items-center justify-center">
             <div data-aos="fade-up" data-aos-duration="1000" class="px-12 pt-0 pb-5 md:py-8 lg:p-12">
                 <!-- Content in the center of the white div -->
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-5">{{ $featureData->title }}</h1>
-                <p class="text-lg md:text-lg lg:text-xl text-gray-600 text-justify">{{ $featureData->description }}</p>
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-5">{{ $featureData->title }}</h1>
+                <p class="text-lg md:text-lg lg:text-xl text-gray-600 text-justify indent-14">{{ $featureData->description }}</p>
             </div>
         </div>
     </div>
