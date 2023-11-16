@@ -19,6 +19,10 @@
         @include('pages.home.section.feature')
     </section>
 
+    <section id="next" class="bg-green-600">
+        @include('components.footer')
+    </section>
+
     @include('components.script')
 </body>
 
