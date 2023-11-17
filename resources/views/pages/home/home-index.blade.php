@@ -16,10 +16,22 @@
     </section>
 
     <section id="next">
+        @include('pages.home.section.about-us')
+    </section>
+
+    <section>
+        @include('pages.home.section.cards')
+    </section>
+
+    <section>
         @include('pages.home.section.feature')
     </section>
 
-    <section id="next" class="bg-green-600">
+    <section>
+        @include('pages.home.section.youtube')
+    </section>
+
+    <section class="bg-green-600">
         @include('components.footer')
     </section>
 
