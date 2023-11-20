@@ -1,0 +1,94 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    color: #1b1c1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolled */
+}
+
+.navbar a {
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    color: #1b1c1e;
+}
+
+.content {
+    margin-top: 80px;
+    padding: 2rem;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        margin-right: 40px;
+    }
+
+    .bar {
+        background-color: #1b1c1e;
+    }
+
+    #nav-links {
+        margin: 50px 20px;
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        right: 5px;
+        background-color: white;
+        width: 90%;
+        max-width: 300px;
+        z-index: 1000;
+    }
+
+    .navbar.mobile-menu-open #nav-links {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for mobile view */
+        color: #1b1c1e;
+    }
+
+    .navbar.scrolled {
+        position: fixed;
+    }
+}

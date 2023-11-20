@@ -25,5 +25,15 @@ class HomeSeeder extends Seeder
             'description' => 'Unwind is a tranquil escape, a sanctuary where the rhythms of nature harmonize with the soothing embrace of luxury.',
             'type' => 'feature'
         ]);
+        Home::factory()->count(1)->create([
+            'title' => 'About Us',
+            'description' => 'Welcome to Martina, where our passion for creating exceptional moments meets 
+                              the epitome of luxury in resorts and event spaces. With an unwavering commitment to excellence, 
+                              we take pride in curating unparalleled experiences that transcend the ordinary. Nestled in 
+                              breathtaking locales, our resorts are designed to be sanctuaries of opulence, providing a 
+                              harmonious blend of indulgence and relaxation. Our event spaces, infused with sophistication 
+                              and versatility, serve as the canvas for your most cherished celebrations.',
+            'type' => 'about us'
+        ]);
     }
 }
