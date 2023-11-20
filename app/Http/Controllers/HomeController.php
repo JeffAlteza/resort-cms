@@ -17,6 +17,7 @@ class HomeController extends Controller
     {
 
         $home = Home::where('type', 'banner')->first();
+        $aboutUs = Home::where('type', 'about us')->first();
         $features = Home::where('type', 'feature')->get();
 //         foreach ($features as $fe) {
 //             dump($fe->image);
@@ -25,6 +26,7 @@ class HomeController extends Controller
         return [
             'homeData' => $home,
             'featureDatas' => $features,
+            'aboutUs' => $aboutUs,
         ];
     }
 }

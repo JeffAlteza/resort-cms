@@ -38,8 +38,7 @@ class HomeResource extends Resource
                             ->disabled()
                             ->dehydrated(),
                         Forms\Components\Textarea::make('description')
-                            ->columnSpanFull()
-                            ->maxLength(255),
+                            ->columnSpanFull(),
                     ])->columns(2),
                     Section::make('Image')->schema([
                         Forms\Components\FileUpload::make('image')

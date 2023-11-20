@@ -1,4 +1,4 @@
-<div class="flex h-5/6 flex-col items-center justify-center bg-green-200 py-10 px-36">
+<div class="flex min-h-5/6 flex-col items-center justify-center bg-green-600 py-10 px-36">
     <div class="flex flex-col items-center justify-center text-center lg:flex-row">
       <!-- Left Content (Iframe) -->
       <div class="mb-4 flex flex-1 lg:mb-0 lg:items-center lg:justify-end lg:pr-10">
@@ -10,8 +10,8 @@
       <!-- Right Content (Title and Description) -->
       <div class="flex flex-1 flex-col text-left lg:px-8" data-aos="fade-up" data-aos-duration="1000">
         <!-- Adjusted lg:px-32 to lg:px-8 for better spacing -->
-        <h1 class="mb-2 text-xl md:text-2xl lg:text-3xl font-bold font-serif">MARTINA'S RESORT - Napakagandang Resort sa Lemery Batangas!</h1>
-        <p class="text-lg md:text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h1 class="mb-2 text-xl md:text-2xl lg:text-3xl font-bold font-serif text-white">MARTINA'S RESORT - Napakagandang Resort sa Lemery Batangas!</h1>
+        <p class="text-lg md:text-lg lg:text-xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     </div>
   </div>

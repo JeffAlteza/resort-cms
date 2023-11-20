@@ -15,9 +15,12 @@
         @include('pages.home.section.landing')
     </section>
 
-    <section id="next">
+    {{-- <section id="next">
         @include('pages.home.section.about-us')
-    </section>
+    </section> --}}
+
+    @include('pages.home.section.about-us2')
+
 
     <section>
         @include('pages.home.section.cards')
