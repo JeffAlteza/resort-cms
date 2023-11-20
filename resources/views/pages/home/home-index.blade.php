@@ -31,7 +31,7 @@
         @include('pages.home.section.youtube')
     </section>
 
-    <section class="bg-green-600">
+    <section class="bg-green-900">
         @include('components.footer')
     </section>
 
