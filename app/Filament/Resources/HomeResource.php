@@ -22,7 +22,11 @@ class HomeResource extends Resource
 
     protected static ?string $navigationLabel = 'Home Page';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Site Management';
+
+    protected static ?string $navigationIcon = 'heroicon-o-home';
+
+    protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
     {
@@ -55,6 +59,7 @@ class HomeResource extends Resource
                                 "false" => "False",
                             ])
                             ->boolean()
+                            ->default(true)
                             ->required(),
                     ])
                 ])->columnSpan(1),
