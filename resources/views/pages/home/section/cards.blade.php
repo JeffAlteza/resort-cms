@@ -1,4 +1,4 @@
-<div class="min-h-5/6 py-8 flex flex-col items-center justify-center bg-green-600">
+<div class="min-h-5/6 py-12 flex flex-col items-center justify-center bg-green-100">
     {{-- <h1 class="text-3xl font-serif font-bold md:text-5xl text-white">
         What we offer
     </h1> --}}

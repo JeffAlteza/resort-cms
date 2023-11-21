@@ -34,9 +34,9 @@
         @include('pages.home.section.youtube')
     </section>
 
-    <section class="bg-green-900">
-        @include('components.footer')
-    </section>
+    @include('pages.home.section.testimonial')
+
+    @include('components.footer3')
 
     @include('components.script')
 </body>

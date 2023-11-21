@@ -10,7 +10,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-2/5 px-4">
+            <div class="w-full lg:w-2/5 px-4 flex flex-col justify-center">
                 <div data-aos="fade-up" data-aos-duration="1000" class="relative">
                     <h1 class="text-3xl font-serif font-bold md:text-5xl dark:text-white">
                         {{ $aboutUs->title }}
@@ -21,7 +21,8 @@
                     {{ $aboutUs->description }}
                 </p>
                 <a data-aos="fade-up" data-aos-duration="1100" href="#next"
-                    class="inline-flex justify-center items-center mt-2 py-2 px-4 text-md  text-center text-green-600 rounded-full bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
+                    class="inline-flex justify-center items-center mt-2 py-2 px-5 text-lg text-center text-green-600 rounded-full bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 max-w-max">
+                    <!-- Changed the width class to max-w-max -->
                     About Us
                 </a>
             </div>

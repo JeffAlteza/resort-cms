@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Home;
 use Illuminate\Http\Request;
 
@@ -15,18 +16,16 @@ class HomeController extends Controller
 
     private function getIndexData()
     {
+        $home = Home::where('type', 'banner')->where('visibility', true)->first();
+        $aboutUs = Home::where('type', 'about us')->where('visibility', true)->first();
+        $features = Home::where('type', 'feature')->where('visibility', true)->limit(3)->get();
+        $contacts = Contact::where('visibility', true)->whereIn('title', ['Cellphone', 'Email', 'Location', 'Facebook', 'Instagram', 'Youtube'])->pluck('description', 'title')->toArray();
 
-        $home = Home::where('type', 'banner')->first();
-        $aboutUs = Home::where('type', 'about us')->first();
-        $features = Home::where('type', 'feature')->get();
-//         foreach ($features as $fe) {
-//             dump($fe->image);
-//         }
-// dd('done');
         return [
             'homeData' => $home,
             'featureDatas' => $features,
             'aboutUs' => $aboutUs,
+            'contact' => $contacts,
         ];
     }
 }
