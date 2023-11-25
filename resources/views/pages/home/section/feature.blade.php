@@ -4,7 +4,7 @@
             class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
             Feature</h1>
         <div class="px-2 lg:px-40">
-            <p data-aos="fade-up" data-aos-duration="1100" class="text-lg text-gray-600 font-shippori">
+            <p data-aos="fade-up" data-aos-duration="1100" class="text-lg text-gray-600 ">
                 Discover the distinct features that make our resort special, ensuring a memorable experience. <br> Welcome to a tranquil haven designed just for you.</p>
         </div>
     </div>
@@ -25,15 +25,15 @@
             <div data-aos="fade-up" data-aos-duration="1000" class="px-12 pt-0 pb-5 md:py-8 md:px-2 lg:py-10 lg:px-12">
                 <!-- Content in the center of the white div -->
                 <div class="flex justify-center md:justify-start lg:justify-start">
-                    <h1 class="font-shippori text-3xl md:text-4xl lg:text-5xl text-gray-800 mb-2">
+                    <h1 class=" text-3xl md:text-4xl lg:text-5xl text-gray-800 mb-2">
                         {{ $featureData->title }}</h1>
                 </div>
-                <p class="text-lg leading-7 text-gray-600 text-justify indent-14 font-shippori">
+                <p class="text-lg leading-7 text-gray-600 text-justify indent-14 ">
                     {{ $featureData->description }}</p>
                 <div class="flex justify-center md:justify-start lg:justify-start">
 
                     <a data-aos="fade-up" data-aos-duration="1000" href="#next"
-                        class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-green-600 rounded-full bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 font-shippori">
+                        class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-green-600 rounded-full bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
                         View More
                     </a>
                 </div>

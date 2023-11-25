@@ -3,9 +3,7 @@ html {
 }
 body {
     margin: 0;
-    /* font-family: "Helvetica Neue", sans-serif; */
     font-family: 'Shippori Mincho', serif;
-    /* font-family: 'Inter', sans-serif; */
     overflow-x: hidden;
     background-color: white;
 }
