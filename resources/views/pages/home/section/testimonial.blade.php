@@ -1,9 +1,20 @@
-<section class="flex items-center bg-slate-50 dark:bg-gray-800 lg:h-4/5">
-    <div class="mx-auto max-w-7xl p-4">
-      <div class="mb-20 text-center">
-        <h1 class="mb-4 text-3xl font-bold dark:text-white font-serif text-gray-800">Testimonials</h1>
-        <p class="mx-auto max-w-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae quam nostrum harum non in at eaque quibusdam eum ratione.</p>
+<div class="min-h-5/6 flex items-center justify-center pb-20 bg-slate-50">
+  <div class="text-center px-10 lg:px-36 pt-10">
+      <h1 data-aos="fade-up" data-aos-duration="1000"
+          class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
+          Feedback</h1>
+      <div class="px-2 lg:px-40">
+          <p data-aos="fade-up" data-aos-duration="1100" class="text-lg text-gray-600 font-shippori">
+              Discover the distinct features that make our resort special, ensuring a memorable experience. <br> Welcome to a tranquil haven designed just for you.</p>
       </div>
+  </div>
+</div>
+<section class="flex items-center bg-slate-50 dark:bg-gray-800 lg:h-4/5">
+     <div class="mx-auto max-w-7xl p-4">
+      {{--<div class="mb-20 text-center">
+        <h1 class="mb-4 text-3xl font-bold dark:text-white font-serif text-gray-800">Feedback</h1>
+        <p class="mx-auto max-w-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae quam nostrum harum non in at eaque quibusdam eum ratione.</p>
+      </div> --}}
       <div class="flex">
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-4">
           <a class="relative mb-20 rounded bg-white text-center shadow dark:bg-gray-700" href="#">

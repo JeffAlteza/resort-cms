@@ -10,8 +10,8 @@
       <!-- Right Content (Title and Description) -->
       <div class="flex flex-1 flex-col text-left lg:px-8" data-aos="fade-up" data-aos-duration="1000">
         <!-- Adjusted lg:px-32 to lg:px-8 for better spacing -->
-        <h1 class="mb-2 text-xl md:text-2xl lg:text-3xl font-bold font-serif text-gray-800">MARTINA'S RESORT - Napakagandang Resort sa Lemery Batangas!</h1>
-        <p class="text-lg md:text-lg lg:text-xl text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h1 class="mb-2 text-xl md:text-2xl lg:text-3xl text-gray-800 font-shippori">MARTINA'S RESORT - Napakagandang Resort sa Lemery Batangas!</h1>
+        <p class="text-lg text-gray-600 font-shippori">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     </div>
   </div>

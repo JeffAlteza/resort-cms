@@ -1,7 +1,17 @@
 <div class="min-h-5/6 py-12 flex flex-col items-center justify-center bg-green-100">
-    {{-- <h1 class="text-3xl font-serif font-bold md:text-5xl text-white">
-        What we offer
-    </h1> --}}
+
+    <div class="min-h-5/6 flex items-center justify-center">
+        <div class="text-center px-10 lg:px-36 mb-5">
+            <h1 data-aos="fade-up" data-aos-duration="1000"
+                class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
+                What we offer</h1>
+            <div class="px-2 lg:px-40">
+                <p data-aos="fade-up" data-aos-duration="1100" class="text-lg text-gray-600 font-shippori">
+                    Explore a variety of curated experiences tailored to your preferences, from indulgent spa treatments to exhilarating adventures, <br> each crafted to add depth and meaning to your stay.
+            </div>
+        </div>
+    </div>
+
     <div class="item flex flex-wrap justify-center gap-4">
 
         <!-- Card 1 -->
@@ -12,8 +22,8 @@
                     <img src="{{ asset('image/photo.png') }}" alt="photo">
                 </div>
                 <div class="h-[30%] rounded-b-xl p-4 pt-0 text-center">
-                    <h1 class="text-2xl font-semibold text-green-600 font-serif">Scenery</h1>
-                    <p class="text-gray-700 text-md">
+                    <h1 class="text-2xl  text-green-600 font-shippori">Scenery</h1>
+                    <p class="text-gray-700 text-md font-shippori">
                         Amidst nature, our resort offers scenic views and lush green surroundings.
                     </p>
                 </div>
@@ -28,8 +38,8 @@
                     <img src="{{ asset('image/safe.png') }}" alt="photo">
                 </div>
                 <div class="h-[30%] rounded-b-xl p-4 pt-0 text-center">
-                    <h1 class="text-2xl font-semibold text-green-600 font-serif">Safety</h1>
-                    <p class="text-gray-700 text-md">
+                    <h1 class="text-2xl  text-green-600 font-shippori">Safety</h1>
+                    <p class="text-gray-700 text-md font-shippori">
                         Nestled in nature, our resort prioritizes safety. With well-lit paths and 24/7 surveillance.
                     </p>
                 </div>
@@ -44,10 +54,9 @@
                     <img src="{{ asset('image/calm.png') }}" alt="photo">
                 </div>
                 <div class="h-[30%] rounded-b-xl p-4 pt-0 text-center">
-                    <h1 class="text-2xl font-semibold text-green-600 font-serif">Calmness</h1>
-                    <p class="text-gray-700 text-md">
-                        Experience serenity in our resort, where the rustle of gentle breezes. Embrace the lush
-                        surroundings.
+                    <h1 class="text-2xl  text-green-600 font-shippori">Calmness</h1>
+                    <p class="text-gray-700 text-md font-shippori">
+                        Experience serenity in our resort, where the rustle of gentle breezes. Embrace nature.
                     </p>
                 </div>
             </div>

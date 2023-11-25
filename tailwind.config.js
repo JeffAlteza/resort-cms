@@ -6,7 +6,15 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        montecarlo : ['MonteCarlo'],
+        inter : ['Inter'],
+        libre : ['Libre Franklin'],
+        dancing : ['Dancing Script'],
+        shippori : ['Shippori Mincho'],
+      }
+    },
   },
   plugins: [
   ],

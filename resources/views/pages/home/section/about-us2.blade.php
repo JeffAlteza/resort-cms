@@ -1,4 +1,15 @@
-<section id="next" class="flex items-center py-20 bg-white xl:h-5/6 font-poppins dark:bg-gray-800">
+<div class="min-h-5/6 flex items-center justify-center">
+    <div class="text-center px-10 lg:px-36 pt-10">
+        <h1 data-aos="fade-up" data-aos-duration="1000"
+            class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
+            About Us</h1>
+        <div class="px-2 lg:px-40">
+            <p data-aos="fade-up" data-aos-duration="1100" class="font-shippori text-lg text-gray-600">
+                Discover the distinct features that make our resort special, ensuring a memorable experience. <br> Welcome to a tranquil haven designed just for you.</p>
+        </div>
+    </div>
+</div>
+<section id="next" class="flex items-center pt-5 py-20 bg-white xl:h-5/6 font-poppins dark:bg-gray-800">
     <div class="justify-center flex-1 max-w-7xl py-4 mx-auto lg:py-6 md:px-6">
         <div class="flex flex-wrap">
             <div data-aos="fade-up" data-aos-duration="1000" class="w-full lg:w-3/5 px-4 mb-10 lg:mb-0">
@@ -12,16 +23,16 @@
             </div>
             <div class="w-full lg:w-2/5 px-4 flex flex-col justify-center">
                 <div data-aos="fade-up" data-aos-duration="1000" class="relative">
-                    <h1 class="text-3xl font-serif font-bold md:text-5xl dark:text-white">
+                    <h1 class="font-shippori text-4xl md:text-5xl dark:text-white">
                         {{ $aboutUs->title }}
                     </h1>
                 </div>
                 <p data-aos="fade-up" data-aos-duration="1100"
-                    class="mt-6 mb-2 text-lg leading-7 text-gray-600 dark:text-gray-400 text-justify indent-14">
+                    class="mt-2 mb-2 text-lg leading-7 text-gray-600 dark:text-gray-400 text-justify indent-14 font-shippori">
                     {{ $aboutUs->description }}
                 </p>
                 <a data-aos="fade-up" data-aos-duration="1100" href="#next"
-                    class="inline-flex justify-center items-center mt-2 py-2 px-5 text-lg text-center text-green-600 rounded-full bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 max-w-max">
+                    class="inline-flex justify-center items-center mt-2 py-2 px-5 text-lg text-center text-green-600 rounded-full bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 max-w-max font-shippori">
                     <!-- Changed the width class to max-w-max -->
                     About Us
                 </a>

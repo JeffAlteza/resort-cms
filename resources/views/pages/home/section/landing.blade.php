@@ -1,6 +1,6 @@
 <section style="background-image: url('{{ asset('storage/'.$homeData['image']) }}');" class="h-screen max-w-screen bg-center bg-no-repeat bg-cover bg-gray-700 flex items-center justify-center mx-auto">
     <div class="text-center text-white" >
-        <h1 data-aos="fade-up" data-aos-duration="1300" style="text-shadow: 2px 2px 4px rgb(78, 78, 78); font-family: 'DM Serif Text', serif"  class="mb-3 text-6xl font-extrabold tracking-tight leading-none md:text-7xl lg:text-8xl">
+        <h1 data-aos="fade-up" data-aos-duration="1300" style="text-shadow: 2px 2px 4px rgb(78, 78, 78);"  class="mb-3 text-6xl tracking-tight leading-none md:text-7xl lg:text-9xl font-montecarlo">
             {{ $homeData['title'] }}
         </h1>
 
