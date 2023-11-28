@@ -16,6 +16,7 @@
     "dependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "aos": "^2.3.4",
-        "taos": "^1.0.5"
+        "taos": "^1.0.5",
+        "tw-elements": "^1.0.0"
     }
 }

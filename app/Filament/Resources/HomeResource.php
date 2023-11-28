@@ -58,6 +58,7 @@ class HomeResource extends Resource
                                 "true" => "True",
                                 "false" => "False",
                             ])
+                            ->disabled(fn (Home $record) => ($record->type != 'feature'))
                             ->boolean()
                             ->default(true)
                             ->required(),

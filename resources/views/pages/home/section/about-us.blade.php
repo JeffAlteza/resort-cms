@@ -1,9 +1,9 @@
 <div class="min-h-5/6 flex items-center justify-center bg-green-200">
     <div class="text-center px-36 pt-10">
-        <h1 data-aos="fade-up" data-aos-duration="1000" class="font-serif text-4xl md:text-5xl lg:text-7xl font-bold text-gray-800 mb-5">
+        <h1 data-aos="fade-up" data-aos-duration="800" class="font-serif text-4xl md:text-5xl lg:text-7xl font-bold text-gray-800 mb-5">
             Resort and Events Place</h1>
         <div class="px-2 lg:px-40">
-            <p data-aos="fade-up" data-aos-duration="1100" class="text-lg md:text-lg lg:text-xl text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing
+            <p data-aos="fade-up" data-aos-duration="900" class="text-lg md:text-lg lg:text-xl text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate

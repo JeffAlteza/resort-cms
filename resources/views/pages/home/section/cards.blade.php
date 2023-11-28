@@ -2,11 +2,11 @@
 
     <div class="min-h-5/6 flex items-center justify-center">
         <div class="text-center px-10 lg:px-36 mb-5">
-            <h1 data-aos="fade-up" data-aos-duration="1000"
+            <h1 data-aos="fade-up" data-aos-duration="800"
                 class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
                 What we offer</h1>
             <div class="px-2 lg:px-40">
-                <p data-aos="fade-up" data-aos-duration="1100" class="text-lg text-gray-600 font-shippori">
+                <p data-aos="fade-up" data-aos-duration="900" class="text-lg text-gray-600 font-shippori">
                     Explore a variety of curated experiences tailored to your preferences, from indulgent spa treatments to exhilarating adventures, <br> each crafted to add depth and meaning to your stay.
             </div>
         </div>
@@ -15,7 +15,7 @@
     <div class="item flex flex-wrap justify-center gap-4">
 
         <!-- Card 1 -->
-        <div data-aos="fade-up" data-aos-duration="1000" class="h-4/5 w-72">
+        <div data-aos="fade-up" data-aos-duration="800" class="h-4/5 w-72">
             <div
                 class="flex flex-col rounded-xl bg-white shadow-lg transform transition-transform hover:translate-y-[-20px] duration-500">
                 <div class="h-[70%] rounded-t-xl text-center">
@@ -31,7 +31,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div data-aos="fade-up" data-aos-duration="1000" class="h-4/5 w-72">
+        <div data-aos="fade-up" data-aos-duration="800" class="h-4/5 w-72">
             <div
                 class="flex flex-col rounded-xl bg-white shadow-lg transform transition-transform hover:translate-y-[-20px] duration-500">
                 <div class="h-[70%] rounded-t-xl text-center">
@@ -47,7 +47,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div data-aos="fade-up" data-aos-duration="1000" class="h-4/5 w-72">
+        <div data-aos="fade-up" data-aos-duration="800" class="h-4/5 w-72">
             <div
                 class="flex flex-col rounded-xl bg-white shadow-lg transform transition-transform hover:translate-y-[-20px] duration-500">
                 <div class="h-[70%] rounded-t-xl text-center">
@@ -64,7 +64,7 @@
     </div>
 
     <!-- Button -->
-    {{-- <a data-aos="fade-up" data-aos-duration="1000" href="#next"
+    {{-- <a data-aos="fade-up" data-aos-duration="800" href="#next"
         class="inline-flex justify-center items-center mt-5 py-2 px-4 text-md  text-center text-white rounded-full bg-green-600 border border-green-600 hover:bg-green-700 focus:ring-4 focus:ring-gray-400 shadow-md">
         About Us
     </a> --}}

@@ -34,6 +34,8 @@
         @include('pages.home.section.youtube')
     </section>
 
+    @include('pages.home.section.carousel')
+
     @include('pages.home.section.testimonial')
 
     @include('components.footer3')
