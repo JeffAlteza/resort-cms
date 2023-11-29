@@ -28,8 +28,8 @@
         <div
             class="relative w-[75%] ml-[12%] overflow-hidden after:clear-both after:block after:content-[''] rounded-3xl">
             @foreach ($galleryPhotos as $index => $galleryPhoto)
-                <div class="relative float-left -mr-[75%] {{ $index !== 0 ? 'hidden' : '' }} w-full h-[500px] transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                    {{ $index === 0 ? 'data-te-carousel-active' : '' }} data-te-carousel-item
+                <div class="relative float-left -mr-[100%] {{ $index !== 0 ? 'hidden' : '' }} w-full h-[500px] transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    {{ $index === 0 ? 'data-te-carousel-active' : '' }} data-te-carousel-item 
                     style="backface-visibility: hidden">
                     <img src="{{ asset('storage/' . $galleryPhoto->image) }}" class="object-cover w-full h-[500px]"
                         alt="{{ $galleryPhoto->alt_text }}" />
