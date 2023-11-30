@@ -38,6 +38,10 @@
 
     @include('pages.home.section.testimonial')
 
+    <section>
+        @include('components.book-now')
+    </section>
+
     @include('components.footer3')
 
     @include('components.script')

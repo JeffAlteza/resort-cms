@@ -11,13 +11,9 @@
 </div>
 <section class="flex items-center bg-slate-100 dark:bg-gray-800 lg:h-4/5">
      <div class="mx-auto max-w-7xl p-4">
-      {{--<div class="mb-20 text-center">
-        <h1 class="mb-4 text-3xl font-bold dark:text-white font-serif text-gray-800">Feedback</h1>
-        <p class="mx-auto max-w-xl text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae quam nostrum harum non in at eaque quibusdam eum ratione.</p>
-      </div> --}}
       <div class="flex">
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-4">
-          <a class="relative mb-20 rounded-2xl bg-white text-center shadow dark:bg-gray-700" href="#">
+          <a data-aos="fade" data-aos-duration="900" class="relative mb-20 rounded-2xl bg-white text-center shadow dark:bg-gray-700">
             <div class="z-20 -mt-24 p-8">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="absolute left-4 top-4 h-20 w-20 opacity-10" viewBox="0 0 16 16">
                 <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
@@ -33,7 +29,7 @@
               </svg>
             </div>
           </a>
-          <a class="relative mb-20 rounded-2xl bg-white text-center shadow dark:bg-gray-700" href="#">
+          <a data-aos="fade" data-aos-duration="900" class="relative mb-20 rounded-2xl bg-white text-center shadow dark:bg-gray-700">
             <div class="z-20 -mt-24 p-8">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="absolute left-4 top-4 h-20 w-20 opacity-10" viewBox="0 0 16 16">
                 <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
@@ -49,7 +45,7 @@
               </svg>
             </div>
           </a>
-          <a class="relative mb-20 rounded-2xl bg-white text-center shadow dark:bg-gray-700" href="#">
+          <a data-aos="fade" data-aos-duration="900" class="relative mb-20 rounded-2xl bg-white text-center shadow dark:bg-gray-700">
             <div class="z-20 -mt-24 p-8">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="absolute left-4 top-4 h-20 w-20 opacity-10" viewBox="0 0 16 16">
                 <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
