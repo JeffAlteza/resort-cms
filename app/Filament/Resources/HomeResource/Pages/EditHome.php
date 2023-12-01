@@ -17,7 +17,7 @@ class EditHome extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\DeleteAction::make()->disabled(fn (Home $record) => ($record->type == 'banner' || 'reserve section')),
+            Actions\DeleteAction::make()->disabled(fn (Home $record) => ($record->type == 'banner' || 'gallery banner')),
             Actions\RestoreAction::make(),
         ];
     }

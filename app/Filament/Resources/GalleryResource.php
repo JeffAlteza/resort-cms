@@ -65,6 +65,7 @@ class GalleryResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('updated_at','desc')
             ->filters([
                 //
             ])

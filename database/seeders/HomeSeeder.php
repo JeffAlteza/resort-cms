@@ -17,15 +17,17 @@ class HomeSeeder extends Seeder
         Home::factory()->count(1)->create(
             [
                 'title' => 'Martina',
-                'image' => 'martina3.jpg',
+                'image' => 'martina11.jpg',
             ]
         );
-        Home::factory()->count(1)->create([
-            'title' => 'What are you waiting for?',
-            'image' => 'martina2.jpg',
-            'description' => 'Reserve Now',
-            'type' => 'reserve section'
-        ]);
+        Home::factory()->count(1)->create(
+            [
+                'title' => 'Gallery',
+                'description' => 'Our gallery provides a glimpse into the diverse experiences that our resort caters to.',
+                'image' => 'martina10.jpg',
+                'type' => 'gallery banner'
+            ]
+        );
         Home::factory()->count(1)->create([
             'title' => 'About Us',
             'image' => 'martina21.jpg',

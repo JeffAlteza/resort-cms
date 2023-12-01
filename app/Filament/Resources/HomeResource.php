@@ -93,7 +93,7 @@ class HomeResource extends Resource
                 ActionGroup::make([
                     Tables\Actions\ViewAction::make()->color('success'),
                     Tables\Actions\EditAction::make()->color('primary'),
-                    Tables\Actions\DeleteAction::make()->disabled(fn (Home $record) => ($record->type == 'banner' || 'reserve section')),
+                    Tables\Actions\DeleteAction::make()->disabled(fn (Home $record) => ($record->type == 'banner' || 'gallery banner')),
                     Tables\Actions\RestoreAction::make(),
                 ])->icon('heroicon-m-ellipsis-horizontal')
             ])
