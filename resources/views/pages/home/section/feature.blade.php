@@ -1,5 +1,5 @@
 <div class="flex items-center justify-center">
-    <div class="text-center px-10 lg:px-36 pt-10">
+    <div class="text-center px-10 lg:px-36 pt-10 pb-5">
         <h1 data-aos="fade-up" data-aos-duration="800"
             class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
             Feature</h1>
