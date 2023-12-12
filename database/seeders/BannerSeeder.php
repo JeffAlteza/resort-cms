@@ -16,19 +16,19 @@ class BannerSeeder extends Seeder
         Banner::insert([
             [
                 'title' => 'Martina',
-                'image' => 'martina11.jpg',
+                'image' => 'martina3.jpg',
                 'type' => 'home',
                 'description' => 'Escape · Reconnect · Thrive · Your Nature Oasis Awaits',
             ],
             [
                 'title' => 'Gallery',
-                'image' => 'martina10.jpg',
+                'image' => 'martina29.jpg',
                 'type' => 'gallery',
                 'description' => 'Our gallery provides a glimpse into the diverse experiences that our resort caters to.',
             ],
             [
                 'title' => 'Feature',
-                'image' => 'martina10.jpg',
+                'image' => 'martina20.jpg',
                 'type' => 'feature',
                 'description' => 'Our gallery provides a glimpse into the diverse experiences that our resort caters to.',
             ],
@@ -40,7 +40,7 @@ class BannerSeeder extends Seeder
             ],
             [
                 'title' => 'Contacts',
-                'image' => 'martina10.jpg',
+                'image' => 'martina28.jpg',
                 'type' => 'contact',
                 'description' => 'Our gallery provides a glimpse into the diverse experiences that our resort caters to.',
             ],

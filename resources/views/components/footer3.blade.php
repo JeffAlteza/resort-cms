@@ -22,15 +22,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-4 h-4 mr-1 text-gray-100 bi bi-dot" viewBox="0 0 16 16">
                                 <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
                               </svg>
-                            <a href="#"
+                            <a href="{{route('feature')}}"
                                 class="inline-block text-base font-normal text-white hover:text-white">Feature</a>
-                        </li>
-                        <li class="flex items-center mb-4 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-4 h-4 mr-1 text-gray-100 bi bi-dot" viewBox="0 0 16 16">
-                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-                              </svg>
-                            <a href="#"
-                                class="inline-block text-base font-normal text-white hover:text-white">About Us</a>
                         </li>
                         <li class="flex items-center mb-4 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-4 h-4 mr-1 text-gray-100 bi bi-dot" viewBox="0 0 16 16">
@@ -38,6 +31,20 @@
                               </svg>
                             <a href="{{route('gallery')}}"
                                 class="inline-block text-base font-normal text-white hover:text-white">Gallery</a>
+                        </li>
+                        <li class="flex items-center mb-4 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-4 h-4 mr-1 text-gray-100 bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <a href="{{route('about-us')}}"
+                                class="inline-block text-base font-normal text-white hover:text-white">About Us</a>
+                        </li>
+                        <li class="flex items-center mb-4 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-4 h-4 mr-1 text-gray-100 bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <a href="{{route('contacts')}}"
+                                class="inline-block text-base font-normal text-white hover:text-white">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +91,7 @@
                         </svg>
                         <span class="text-white hover:text-white ">Facebook</span>
                     </a>
-                    <a href="{{$contact['Facebook']}}" class="flex items-center mb-4 ">
+                    <a href="{{$contact['Youtube']}}" class="flex items-center mb-4 ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="w-4 h-4 mr-2 text-gray-100 bi bi-youtube" viewBox="0 0 16 16">
                             <path
@@ -92,7 +99,7 @@
                         </svg>
                         <span class="text-white hover:text-white">Youtube</span>
                     </a>
-                    <a href="{{$contact['Facebook']}}" class="flex items-center mb-4">
+                    <a href="{{$contact['Instagram']}}" class="flex items-center mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class=" w-4 h-4 mr-2 text-gray-100 bi bi-instagram" viewBox="0 0 16 16">
                             <path

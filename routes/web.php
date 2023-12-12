@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Models\Gallery;
@@ -20,3 +23,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
+Route::get('/feature', [FeatureController::class, 'index'])->name('feature');
+
+Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
+
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');

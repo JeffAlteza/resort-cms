@@ -1,15 +1,17 @@
-<div class="flex items-center justify-center">
-    <div class="text-center px-10 lg:px-36 pt-10 pb-5">
-        <h1 data-aos="fade-up" data-aos-duration="800"
-            class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
-            Feature</h1>
-        <div class="px-2 lg:px-40">
-            <p data-aos="fade-up" data-aos-duration="900" class="text-lg text-gray-600 ">
-                Discover the distinct features that make our resort special, ensuring a memorable experience. <br> Welcome to a tranquil haven designed just for you.</p>
+@if (\Illuminate\Support\Facades\Route::currentRouteName() != 'feature')
+    <div class="flex items-center justify-center">
+        <div class="text-center px-10 lg:px-36 pt-10 pb-5">
+            <h1 data-aos="fade-up" data-aos-duration="800"
+                class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
+                Feature</h1>
+            <div class="px-2 lg:px-40">
+                <p data-aos="fade-up" data-aos-duration="900" class="text-lg text-gray-600 ">
+                    Discover the distinct features that make our resort special, ensuring a memorable experience. <br>
+                    Welcome to a tranquil haven designed just for you.</p>
+            </div>
         </div>
     </div>
-</div>
-
+@endif
 
 @foreach ($featureDatas as $index => $featureData)
     <div class="min-h-4/5 lg:px-48 mb-5 flex flex-col md:flex-row {{ $index % 2 === 0 ? '' : 'md:flex-row-reverse' }}">
@@ -30,12 +32,15 @@
                 </div>
                 <p class="text-lg leading-7 text-gray-600 text-justify indent-14 ">
                     {{ $featureData->description }}</p>
-                <div class="flex justify-center md:justify-start lg:justify-start">
-                    <a data-aos="fade-up" data-aos-duration="800" href="#next"
-                        class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
-                        View More
-                    </a>
-                </div>
+                @if (\Illuminate\Support\Facades\Route::currentRouteName() != 'feature')
+                    <div class="flex justify-center md:justify-start lg:justify-start">
+                        <a data-aos="fade-up" data-aos-duration="800" href="#next"
+                            class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
+                            View More
+                        </a>
+                    </div>
+                @endif
+
             </div>
         </div>
     </div>

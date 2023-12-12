@@ -11,40 +11,22 @@
         @include('components.navbar')
     </header>
 
-    <section>
-        @include('pages.home.section.landing')
+    <section class="mb-4">
+        @include('pages.gallery.section.banner')
     </section>
-
-    {{-- <section id="next">
-        @include('pages.home.section.about-us')
-    </section> --}}
 
     @include('pages.home.section.about-us2')
 
+    @include('pages.about-us.section.timeline')
 
-    <section>
-        @include('pages.home.section.cards')
-    </section>
-
-    <section>
-        @include('pages.home.section.feature')
-    </section>
-
-    <section>
-        @include('pages.home.section.youtube')
-    </section>
-
-    @include('pages.home.section.carousel')
-
-    
     <section>
         @include('pages.home.section.location')
     </section>
-    @include('pages.home.section.testimonial')
-
+    
     <section>
         @include('components.book-now')
     </section>
+    
 
     @include('components.footer3')
 

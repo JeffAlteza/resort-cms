@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Home;
@@ -18,13 +19,13 @@ class GalleryController extends Controller
     private function getIndexData()
     {
         $gallery = Gallery::where('visibility', true)->get();
-        $home = Home::where('type', 'gallery banner')->first();
+        $banner = Banner::where('type', 'gallery')->first();
         $contacts = Contact::where('visibility', true)->whereIn('title', ['Cellphone', 'Email', 'Location', 'Facebook', 'Instagram', 'Youtube'])->pluck('description', 'title')->toArray();
 
         return [
             'contact' => $contacts,
             'galleryPhotos' => $gallery,
-            'home' => $home
+            'banner' => $banner
         ];
     }
 }

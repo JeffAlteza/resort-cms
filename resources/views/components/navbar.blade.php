@@ -9,10 +9,10 @@
         </div>
         <nav class="flex" id="nav-links">
             <a href="/" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Home</a>
-            <a href="#" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Feature</a>
-            <a href="#" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">About Us</a>
+            <a href="{{route('feature')}}" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Feature</a>
             <a href="{{route('gallery')}}" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Gallery</a>
-            <a href="#" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Contact</a>
+            <a href="{{route('about-us')}}" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">About Us</a>
+            <a href="{{route('contacts')}}" class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg">Contact</a>
         </nav>
     </div>
 </div>
