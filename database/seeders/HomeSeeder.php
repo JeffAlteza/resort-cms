@@ -18,6 +18,7 @@ class HomeSeeder extends Seeder
             [
                 'title' => 'Martina',
                 'image' => 'martina11.jpg',
+                'type' => 'home banner'
             ]
         );
         Home::factory()->count(1)->create(

@@ -20,7 +20,7 @@ class HomeResource extends Resource
 {
     protected static ?string $model = Home::class;
 
-    protected static ?string $navigationLabel = 'Home Page';
+    protected static ?string $navigationLabel = 'Home';
 
     protected static ?string $navigationGroup = 'Site Management';
 
@@ -58,7 +58,6 @@ class HomeResource extends Resource
                                 "true" => "True",
                                 "false" => "False",
                             ])
-                            ->disabled(fn (Home $record) => ($record->type != 'feature'))
                             ->boolean()
                             ->default(true)
                             ->required(),
@@ -93,7 +92,7 @@ class HomeResource extends Resource
                 ActionGroup::make([
                     Tables\Actions\ViewAction::make()->color('success'),
                     Tables\Actions\EditAction::make()->color('primary'),
-                    Tables\Actions\DeleteAction::make()->disabled(fn (Home $record) => ($record->type == 'banner' || 'gallery banner')),
+                    // Tables\Actions\DeleteAction::make()->disabled(fn (Home $record) => ($record->type == 'banner' || 'gallery banner')),
                     Tables\Actions\RestoreAction::make(),
                 ])->icon('heroicon-m-ellipsis-horizontal')
             ])
@@ -123,6 +122,7 @@ class HomeResource extends Resource
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
+            ->where('type', '!=', 'feature')
             ->withoutGlobalScopes([
                 SoftDeletingScope::class,
             ]);
