@@ -106,27 +106,30 @@
                 </div>
             </div>
             <div class="w-full px-4 lg:w-1/2">
-                <form action="" class="p-6 bg-white dark:bg-gray-900 rounded-lg">
-                    <div class="mb-6 ">
-                        <label for="firstname" class="block mb-2 text-gray-700 dark:text-gray-400">
-                            Email</label>
-                        <input type="text" placeholder="abc@gmail.com" required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 ">
+                <form action="{{ route('inquiry-mail') }}" method="post" class="p-6 bg-white dark:bg-gray-900 rounded-lg">
+                    @csrf
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-gray-700 dark:text-gray-400">Email</label>
+                        <input type="text" name="email" placeholder="abc@gmail.com" required=""
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800">
                     </div>
-                    <div class="mb-6 ">
-                        <label for="firstname" class="block mb-2 text-gray-700 dark:text-gray-400">
-                            Subject</label>
-                        <input type="text" placeholder="I'm asking information for..." required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800 ">
+                    <div class="mb-6">
+                        <label for="cellphone" class="block mb-2 text-gray-700 dark:text-gray-400">Cellphone Number</label>
+                        <input type="text" name="cellphone" placeholder="+639-123456789" required=""
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800">
                     </div>
-                    <div class="mb-6 ">
-                        <label for="firstname" class="block mb-2 text-gray-700 dark:text-gray-400">
-                            Message</label>
-                        <textarea type="message" placeholder="Input any inquiries or clarifications" required=""
-                            class="block w-full px-4 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 py-7 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 "></textarea>
+                    <div class="mb-6">
+                        <label for="subject" class="block mb-2 text-gray-700 dark:text-gray-400">Subject</label>
+                        <input type="text" name="subject" placeholder="I'm asking information for..." required=""
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800">
                     </div>
-                    <button
-                        class="inline-flex justify-center items-center py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 text-gray-700 dark:text-gray-400">Message</label>
+                        <textarea name="message" placeholder="Input any inquiries or clarifications" required=""
+                            class="block w-full px-4 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 py-7 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="inline-flex justify-center items-center py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400">
                         Send
                     </button>
                 </form>

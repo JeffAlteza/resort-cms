@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('feedback', function (Blueprint $table) {
+        Schema::create('inquiries', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('address')->nullable();
-            $table->string('occupation')->nullable();
-            $table->text('feedback')->nullable();
-            $table->string('image')->nullable();
+            $table->string('email')->nullable();
+            $table->string('cellphone')->nullable();
+            $table->string('subject')->nullable();
+            $table->text('message')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('feedback');
+        Schema::dropIfExists('inquiries');
     }
 };

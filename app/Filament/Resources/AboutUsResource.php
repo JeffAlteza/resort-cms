@@ -72,7 +72,7 @@ class AboutUsResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                Tables\Filters\TrashedFilter::make()->native(false),
             ])
             ->actions([
                 ActionGroup::make([

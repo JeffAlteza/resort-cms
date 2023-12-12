@@ -69,7 +69,7 @@ class GalleryResource extends Resource
             ])
             ->defaultSort('updated_at', 'desc')
             ->filters([
-                //
+                Tables\Filters\TrashedFilter::make()->native(false),
             ])
             ->actions([
                 ActionGroup::make([
