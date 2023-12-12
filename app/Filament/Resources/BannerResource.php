@@ -2,50 +2,43 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ContactResource\Pages;
-use App\Filament\Resources\ContactResource\RelationManagers;
-use App\Models\Contact;
+use App\Filament\Resources\BannerResource\Pages;
+use App\Filament\Resources\BannerResource\RelationManagers;
+use App\Models\Banner;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ContactResource extends Resource
+class BannerResource extends Resource
 {
-    protected static ?string $model = Contact::class;
+    protected static ?string $model = Banner::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Site Management';
 
-    protected static ?string $navigationIcon = 'heroicon-o-device-phone-mobile';
-
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->disabled()
-                    ->dehydrated()
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('description')
-                    // ->hidden(Contact::where('type', 'link'))
-                    ->columnSpanFull(),
-                Forms\Components\Select::make('visibility')
-                    ->options([
-                        "true" => "True",
-                        "false" => "False",
-                    ])
-                    ->boolean()
-                    ->default(true)
-                    ->native(false)
-                    ->required(),
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('type')
-                    ->disabled()
-                    ->dehydrated(),
+                    ->disabled(),
+                Forms\Components\Textarea::make('description')
+                    ->maxLength(65535)
+                    ->columnSpanFull(),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->columnSpanFull()
+                    ->required(),
             ]);
     }
 
@@ -54,14 +47,13 @@ class ContactResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('description')->limit(20),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('type')
-                ->badge(),
-                Tables\Columns\IconColumn::make('visibility')
-                    ->alignCenter()
-                    ->boolean(),
+                    ->badge(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
+                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
@@ -72,8 +64,11 @@ class ContactResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                // Tables\Actions\DeleteAction::make(),
+                ActionGroup::make([
+                    Tables\Actions\ViewAction::make()->color('success'),
+                    Tables\Actions\EditAction::make()->color('primary'),
+                    // Tables\Actions\DeleteAction::make()->color('danger'),
+                ])->icon('heroicon-m-ellipsis-horizontal')
             ])
             ->bulkActions([
                 // Tables\Actions\BulkActionGroup::make([
@@ -85,7 +80,7 @@ class ContactResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageContacts::route('/'),
+            'index' => Pages\ManageBanners::route('/'),
         ];
     }
 }

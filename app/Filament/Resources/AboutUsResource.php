@@ -2,11 +2,12 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\GalleryResource\Pages;
-use App\Filament\Resources\GalleryResource\RelationManagers;
-use App\Models\Gallery;
+use App\Filament\Resources\AboutUsResource\Pages;
+use App\Filament\Resources\AboutUsResource\RelationManagers;
+use App\Models\AboutUs;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\ActionGroup;
@@ -14,37 +15,42 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class GalleryResource extends Resource
+class AboutUsResource extends Resource
 {
-    protected static ?string $model = Gallery::class;
+    protected static ?string $model = AboutUs::class;
+
+    protected static ?string $navigationLabel = 'About Us';
 
     protected static ?string $navigationGroup = 'Site Management';
 
-    protected static ?string $navigationIcon = 'heroicon-o-photo';
+    protected static ?int $navigationSort = 6;
 
-    protected static ?int $navigationSort = 3;
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->required(),
-                Forms\Components\Select::make('visibility')
+                    ->maxLength(255),
+                Forms\Components\Select::make('type')
                     ->options([
-                        "true" => "True",
-                        "false" => "False",
+                        "about us" => "About Us",
+                        "timeline" => "Timeline",
                     ])
-                    ->default(true)
-                    ->boolean()
+                    ->reactive()
+                    ->default('timeline')
                     ->native(false)
                     ->required(),
                 Forms\Components\Textarea::make('description')
+                    ->maxLength(65535)
+                    ->columnSpanFull(),
+                Forms\Components\DatePicker::make('date')
+                    ->hidden(fn (Get $get) => $get('type') != 'timeline')
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
-                    ->columnSpanFull()
-                    ->required(),
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -53,21 +59,18 @@ class GalleryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('description')->limit(20),
                 Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\IconColumn::make('visibility')
-                    ->alignCenter()
-                    ->boolean(),
+                Tables\Columns\TextColumn::make('type'),
+                Tables\Columns\TextColumn::make('date')
+                    ->date(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->defaultSort('updated_at', 'desc')
             ->filters([
                 //
             ])
@@ -75,14 +78,13 @@ class GalleryResource extends Resource
                 ActionGroup::make([
                     Tables\Actions\ViewAction::make()->color('success'),
                     Tables\Actions\EditAction::make()->color('primary'),
-                    Tables\Actions\DeleteAction::make()->color('danger'),
+                    Tables\Actions\DeleteAction::make()->color('danger')->hidden(fn (AboutUs $record) => ($record->type != 'timeline')),
                     Tables\Actions\RestoreAction::make(),
                 ])->icon('heroicon-m-ellipsis-horizontal')
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\RestoreBulkAction::make('restore'),
                 ]),
             ]);
     }
@@ -90,15 +92,7 @@ class GalleryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageGalleries::route('/'),
+            'index' => Pages\ManageAboutUs::route('/'),
         ];
-    }
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
     }
 }

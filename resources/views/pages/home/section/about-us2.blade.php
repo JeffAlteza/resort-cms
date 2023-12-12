@@ -1,4 +1,4 @@
-<div class="min-h-5/6 flex items-center justify-center">
+<div id="next" class="min-h-5/6 flex items-center justify-center">
     <div class="text-center px-10 lg:px-36 pt-10">
         <h1 data-aos="fade-up" data-aos-duration="800"
             class="font-dancing text-5xl md:text-5xl lg:text-7xl text-gray-800">
@@ -9,7 +9,7 @@
         </div>
     </div>
 </div>
-<section id="next" class="flex items-center pt-5 py-20 bg-white xl:h-5/6 font-poppins dark:bg-gray-800">
+<section class="flex items-center pt-5 py-20 bg-white xl:h-5/6 font-poppins dark:bg-gray-800">
     <div class="justify-center flex-1 max-w-7xl py-4 mx-auto lg:py-6 md:px-6">
         <div class="flex flex-wrap">
             <div data-aos="fade-up" data-aos-duration="800" class="w-full lg:w-3/5 px-4 mb-10 lg:mb-0">

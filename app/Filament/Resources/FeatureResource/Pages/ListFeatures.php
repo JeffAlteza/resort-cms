@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\HomeResource\Pages;
+namespace App\Filament\Resources\FeatureResource\Pages;
 
-use App\Filament\Resources\HomeResource;
+use App\Filament\Resources\FeatureResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListHomes extends ListRecords
+class ListFeatures extends ListRecords
 {
-    protected static string $resource = HomeResource::class;
+    protected static string $resource = FeatureResource::class;
 
     protected function getHeaderActions(): array
     {
