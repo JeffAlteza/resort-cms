@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,7 +28,15 @@ class InquiryResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('email')
                     ->email(),
-                Forms\Components\TextInput::make('cellphone'),
+                Forms\Components\Select::make('responded')
+                    ->options([
+                        "true" => "True",
+                        "false" => "False",
+                    ])
+                    ->boolean()
+                    ->native(false),
+                Forms\Components\TextInput::make('cellphone')
+                    ->columnSpanFull(),
                 Forms\Components\TextInput::make('subject')
                     ->columnSpanFull(),
                 Forms\Components\Textarea::make('message')
@@ -44,6 +53,14 @@ class InquiryResource extends Resource
                 Tables\Columns\TextColumn::make('cellphone'),
                 Tables\Columns\TextColumn::make('message'),
                 Tables\Columns\TextColumn::make('subject'),
+                Tables\Columns\ToggleColumn::make('responded')
+                    ->onColor('success')
+                    ->offColor('danger')
+                    ->onIcon('heroicon-m-check')
+                    ->offIcon('heroicon-m-x-mark'),
+                // Tables\Columns\IconColumn::make('responded')
+                //     ->alignCenter()
+                //     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -55,10 +72,15 @@ class InquiryResource extends Resource
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make()->native(false),
+                Tables\Filters\TernaryFilter::make('responded')->native(false),
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make(),
-                Tables\Actions\ViewAction::make()->color('primary'),
+                ActionGroup::make([
+                    Tables\Actions\ViewAction::make()->color('success'),
+                    Tables\Actions\EditAction::make()->color('primary'),
+                    Tables\Actions\DeleteAction::make()->color('danger'),
+                    Tables\Actions\RestoreAction::make(),
+                ])->icon('heroicon-m-ellipsis-horizontal')
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

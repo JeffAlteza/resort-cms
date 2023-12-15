@@ -34,15 +34,15 @@ class ContactResource extends Resource
                 Forms\Components\Textarea::make('description')
                     // ->hidden(Contact::where('type', 'link'))
                     ->columnSpanFull(),
-                Forms\Components\Select::make('visibility')
-                    ->options([
-                        "true" => "True",
-                        "false" => "False",
-                    ])
-                    ->boolean()
-                    ->default(true)
-                    ->native(false)
-                    ->required(),
+                // Forms\Components\Select::make('visibility')
+                //     ->options([
+                //         "true" => "True",
+                //         "false" => "False",
+                //     ])
+                //     ->boolean()
+                //     ->default(true)
+                //     ->native(false)
+                //     ->required(),
                 Forms\Components\TextInput::make('type')
                     ->disabled()
                     ->dehydrated(),
@@ -57,9 +57,9 @@ class ContactResource extends Resource
                 Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('type')
                 ->badge(),
-                Tables\Columns\IconColumn::make('visibility')
-                    ->alignCenter()
-                    ->boolean(),
+                // Tables\Columns\IconColumn::make('visibility')
+                //     ->alignCenter()
+                //     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->toggleable(isToggledHiddenByDefault: true),

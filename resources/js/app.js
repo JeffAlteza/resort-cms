@@ -1,10 +1,9 @@
-import './bootstrap';
+import "./bootstrap";
 
-import {
-    Carousel,
-    initTE,
-} from "tw-elements";
+import { Modal, Ripple, Carousel, initTE } from "tw-elements";
 
 initTE({
-    Carousel
+    Carousel,
+    Modal,
+    Ripple,
 });

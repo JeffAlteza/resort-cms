@@ -68,9 +68,11 @@ class FeatureResource extends Resource
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('description')->limit(20),
                 Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\IconColumn::make('visibility')
-                    ->alignCenter()
-                    ->boolean(),
+                Tables\Columns\ToggleColumn::make('visibility')
+                    ->onColor('success')
+                    ->offColor('danger')
+                    ->onIcon('heroicon-m-check')
+                    ->offIcon('heroicon-m-x-mark'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->toggleable(isToggledHiddenByDefault: true),

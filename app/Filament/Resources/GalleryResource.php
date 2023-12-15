@@ -55,9 +55,14 @@ class GalleryResource extends Resource
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('description')->limit(20),
                 Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\IconColumn::make('visibility')
-                    ->alignCenter()
-                    ->boolean(),
+                Tables\Columns\ToggleColumn::make('visibility')
+                    ->onColor('success')
+                    ->offColor('danger')
+                    ->onIcon('heroicon-m-check')
+                    ->offIcon('heroicon-m-x-mark'),
+                // Tables\Columns\IconColumn::make('visibility')
+                //     ->alignCenter()
+                //     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -70,6 +75,7 @@ class GalleryResource extends Resource
             ->defaultSort('updated_at', 'desc')
             ->filters([
                 Tables\Filters\TrashedFilter::make()->native(false),
+                Tables\Filters\TernaryFilter::make('responded')->native(false),
             ])
             ->actions([
                 ActionGroup::make([

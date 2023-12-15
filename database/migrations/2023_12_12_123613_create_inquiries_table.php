@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('cellphone')->nullable();
             $table->string('subject')->nullable();
             $table->text('message')->nullable();
+            $table->boolean('responded')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });

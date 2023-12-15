@@ -54,10 +54,13 @@ class ContactController extends Controller
         Notification::make()
             ->icon('heroicon-o-document-text')
             ->iconColor('success')
-            ->title('New Inquiry Notification')
+            ->title('New Inquiry Notification from ' . $attributes['email'])
             ->body('Please check your email or go to the Inquiry page')
             ->sendToDatabase($recipient);
 
-        return 'Success';
+        $data = $this->getIndexData();
+        $data['success'] = true;
+
+        return view('pages.contact.contact-index', $data);
     }
 }

@@ -28,3 +28,5 @@ Route::get('/feature', [FeatureController::class, 'index'])->name('feature');
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+
+Route::view('/success-inquiry', 'pages.status.success-inquiry')->name('success-inquiry');

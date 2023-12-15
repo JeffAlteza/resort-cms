@@ -14,6 +14,7 @@ class Inquiry extends Model
         'email',
         'cellphone',
         'subject',
+        'responded',
         'message'
     ];
 

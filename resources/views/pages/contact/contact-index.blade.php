@@ -14,7 +14,9 @@
     <section>
         @include('pages.gallery.section.banner')
     </section>
-
+    
+    @include('components.modal')
+    
     @include('pages.contact.section.contacts')
 
     <section>

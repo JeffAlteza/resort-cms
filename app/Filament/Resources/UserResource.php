@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FeedbackResource\Pages;
-use App\Filament\Resources\FeedbackResource\RelationManagers;
-use App\Models\Feedback;
+use App\Filament\Resources\UserResource\Pages;
+use App\Filament\Resources\UserResource\RelationManagers;
+use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,15 +14,13 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class FeedbackResource extends Resource
+class UserResource extends Resource
 {
-    protected static ?string $model = Feedback::class;
+    protected static ?string $model = User::class;
 
-    protected static ?string $navigationGroup = 'Site Management';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
 
-    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-bottom-center-text';
-
-    protected static ?int $navigationSort = 6;
+    protected static ?string $navigationGroup = 'User Management';
 
     public static function form(Form $form): Form
     {
@@ -31,16 +29,15 @@ class FeedbackResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('occupation')
+                Forms\Components\TextInput::make('email')
+                    ->email()
+                    ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('address')
-                    ->columnSpanFull()
+                Forms\Components\DateTimePicker::make('email_verified_at'),
+                Forms\Components\TextInput::make('password')
+                    ->password()
+                    ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('feedback')
-                    ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->columnSpanFull(),
             ]);
     }
 
@@ -50,11 +47,11 @@ class FeedbackResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('address')
+                Tables\Columns\TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('occupation')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('email_verified_at')
+                    ->dateTime()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -77,15 +74,16 @@ class FeedbackResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
+                    // Tables\Actions\DeleteBulkAction::make(),
                     Tables\Actions\RestoreBulkAction::make('restore'),
                 ]),
             ]);
     }
-
+    
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageFeedback::route('/'),
+            'index' => Pages\ManageUsers::route('/'),
         ];
-    }
+    }    
 }

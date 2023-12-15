@@ -23,9 +23,9 @@ class AboutUsResource extends Resource
 
     protected static ?string $navigationGroup = 'Site Management';
 
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 4;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-question-mark-circle';
 
     public static function form(Form $form): Form
     {
