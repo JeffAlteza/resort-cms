@@ -12,7 +12,7 @@
         </div>
     </div>
 @endif
-<section class="flex items-center pt-5 py-20 bg-white xl:h-5/6 font-poppins dark:bg-gray-800">
+<section class="flex items-center pt-5 py-20 bg-white xl:h-5/6 font-poppins">
     <div class="justify-center flex-1 max-w-7xl py-4 mx-auto lg:py-6 md:px-6">
         <div class="flex flex-wrap">
             <div data-aos="fade-up" data-aos-duration="800" class="w-full lg:w-3/5 px-4 mb-10 lg:mb-0">
@@ -26,12 +26,12 @@
             </div>
             <div class="w-full lg:w-2/5 px-4 flex flex-col justify-center">
                 <div data-aos="fade-up" data-aos-duration="800" class="relative">
-                    <h1 class="font-shippori text-4xl md:text-5xl dark:text-white">
+                    <h1 class="font-shippori text-4xl md:text-5xl">
                         {{ $aboutUs->title }}
                     </h1>
                 </div>
                 <p data-aos="fade-up" data-aos-duration="900"
-                    class="mt-2 mb-2 text-lg leading-7 text-gray-600 dark:text-gray-400 text-justify indent-14 font-shippori">
+                    class="mt-2 mb-2 text-lg leading-7 text-gray-600 text-justify indent-14 font-shippori">
                     {{ $aboutUs->description }}
                 </p>
                 @if (\Illuminate\Support\Facades\Route::currentRouteName() != 'about-us')

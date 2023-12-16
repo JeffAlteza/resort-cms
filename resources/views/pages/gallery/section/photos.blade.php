@@ -1,5 +1,5 @@
 
-<section id="next" class="font-poppins flex items-center bg-white pb-16 pt-5 dark:bg-gray-800">
+<section id="next" class="font-poppins flex items-center bg-white pb-16 pt-5">
     <div class="mx-auto max-w-6xl p-4">
 
         <div class="-m-1 flex flex-wrap md:-m-2">
@@ -21,8 +21,8 @@
                             alt="" />
                         <div class="absolute inset-0 z-0 opacity-60 group-hover:bg-gray-900"></div>
                         <div class="content absolute bottom-4 left-4 right-4 hidden p-4 text-center group-hover:block">
-                            <a href="#" class="mb-2 text-2xl font-semibold text-gray-100 dark:text-white">{{ $galleryPhoto->title }}</a>
-                            <h2 class="mb-0 text-sm font-light text-gray-300 dark:text-gray-300">{{ $galleryPhoto->description }}</h2>
+                            <a href="#" class="mb-2 text-2xl font-semibold text-gray-100">{{ $galleryPhoto->title }}</a>
+                            <h2 class="mb-0 text-sm font-light text-gray-300">{{ $galleryPhoto->description }}</h2>
                         </div>
                     </div>
                 </div>

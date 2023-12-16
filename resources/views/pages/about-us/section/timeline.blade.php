@@ -1,4 +1,4 @@
-<section class="font-poppins items-center bg-gray-100 py-14 dark:bg-gray-800">
+<section class="font-poppins items-center bg-gray-100 py-14">
     <div class="mx-auto max-w-6xl justify-center px-4 py-4 md:px-6 lg:py-8">
         <div class="mx-auto max-w-xl">
             <div class="text-center">

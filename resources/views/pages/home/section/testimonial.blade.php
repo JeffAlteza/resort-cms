@@ -9,13 +9,13 @@
         </div>
     </div>
 </div>
-<section class="flex items-center bg-slate-100 dark:bg-gray-800 lg:h-4/5">
+<section class="flex items-center bg-slate-100 lg:h-4/5">
     <div class="mx-auto max-w-7xl p-4">
         <div class="flex">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-4">
                 @foreach ($feedbacks as $feedback)
                     <a data-aos="fade" data-aos-duration="900"
-                        class="relative mb-20 rounded-2xl bg-white text-center shadow dark:bg-gray-700">
+                        class="relative mb-20 rounded-2xl bg-white text-center shadow">
                         <div class="z-20 -mt-24 p-8">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 class="absolute left-4 top-4 h-20 w-20 opacity-10" viewBox="0 0 16 16">
@@ -28,10 +28,10 @@
                                     src="{{ asset('storage/' . $feedback->image) }}" alt="" />
                             </div>
                             <p class="mb-4 text-base leading-7 text-gray-700">{{ $feedback->feedback }}</p>
-                            <h2 class="text-lg font-bold leading-9 text-black dark:text-white font">
+                            <h2 class="text-lg font-bold leading-9 text-black font">
                                 {{ $feedback->name }}</h2>
                             <span
-                                class="block text-xs font-semibold uppercase text-green-600 dark:text-green-600">{{ $feedback->address }}</span>
+                                class="block text-xs font-semibold uppercase text-green-600">{{ $feedback->address }}</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 class="absolute bottom-4 right-4 h-20 w-20 rotate-180 opacity-10" viewBox="0 0 16 16">
                                 <path

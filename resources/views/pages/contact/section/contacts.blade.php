@@ -1,7 +1,7 @@
-<section class="flex items-center bg-gray-100 lg:h-screen font-poppins dark:bg-gray-800 ">
+<section class="flex items-center bg-gray-100 lg:h-screen font-poppins  ">
     <div class="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-11 md:px-6">
         <div class="mb-10 text-left">
-            <h2 class="pb-2 mb-2 text-xl font-bold text-gray-800 md:text-3xl dark:text-gray-300">
+            <h2 class="pb-2 mb-2 text-xl font-bold text-gray-800 md:text-3xl ">
                 Let's Stay Connected
             </h2>
             <p class="text-sm text-gray-700">Get in touch with us, contacts are listed below </p>
@@ -12,7 +12,7 @@
                     <div class="w-full px-4 mb-10 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full dark:bg-green-500">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                     <path
@@ -20,16 +20,16 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl dark:text-gray-400">
+                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl ">
                                 Email</h2>
                             <a href="#"
-                                class="text-base font-medium text-gray-500 md:text-lg dark:text-gray-400">{{ $contact['Email'] }}</a>
+                                class="text-base font-medium text-gray-500 md:text-lg ">{{ $contact['Email'] }}</a>
                         </div>
                     </div>
                     <div class="w-full px-4 mb-10 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full dark:bg-green-500">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                                     <path
@@ -37,16 +37,16 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl dark:text-gray-400">
+                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl ">
                                 Phone</h2>
                             <a href="#"
-                                class="text-base font-medium text-gray-500 md:text-lg dark:text-gray-400">{{ $contact['Cellphone'] }}</a>
+                                class="text-base font-medium text-gray-500 md:text-lg ">{{ $contact['Cellphone'] }}</a>
                         </div>
                     </div>
                     <div class="w-full px-4 mb-10 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full dark:bg-green-500">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                                     <path
@@ -55,16 +55,16 @@
                                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
                                 </svg>
                             </div>
-                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl dark:text-gray-400">
+                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl ">
                                 Location</h2>
-                            <a href="#" class="text-base font-medium text-gray-500 md:text-lg dark:text-gray-400">
+                            <a href="#" class="text-base font-medium text-gray-500 md:text-lg ">
                                 {{ $contact['Location'] }}</a>
                         </div>
                     </div>
                     <div class="w-full px-4 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full dark:bg-green-500">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
                                     <path
@@ -72,10 +72,10 @@
                                     </path>
                                 </svg>
                             </div>
-                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl dark:text-gray-400">
+                            <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl ">
                                 Social</h2>
                             <a href="{{ $contact['Facebook'] }}"
-                                class="inline-block mr-1 text-green-600 dark:text-green-400 dark:hover:text-green-300 hover:text-green-700">
+                                class="inline-block mr-1 text-green-600  hover:text-green-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="w-6 h-6 bi bi-facebook" viewBox="0 0 16 16">
                                     <path
@@ -84,7 +84,7 @@
                                 </svg>
                             </a>
                             <a href="{{ $contact['Youtube'] }}"
-                                class="inline-block mr-1 text-green-500 hover:text-green-600 dark:text-green-400 dark:hover:text-green-300">
+                                class="inline-block mr-1 text-green-500 hover:text-green-600 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="w-6 h-6 bi bi-youtube" viewBox="0 0 16 16">
                                     <path
@@ -92,7 +92,7 @@
                                 </svg>
                             </a>
                             <a href="{{ $contact['Instagram'] }}"
-                                class="inline-block mr-1 text-green-400 dark:text-green-400 dark:hover:text-green-300 hover:text-green-600">
+                                class="inline-block mr-1 text-green-400  hover:text-green-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class=" w-6 h-6 bi bi-instagram" viewBox="0 0 16 16">
                                     <path
@@ -105,29 +105,29 @@
             </div>
             <div class="w-full px-4 lg:w-1/2">
                 <form action="{{ route('inquiry-mail') }}" method="post"
-                    class="p-6 bg-white dark:bg-gray-900 rounded-lg">
+                    class="p-6 bg-white  rounded-lg">
                     @csrf
                     <div class="mb-6">
-                        <label for="email" class="block mb-2 text-gray-700 dark:text-gray-400">Email</label>
+                        <label for="email" class="block mb-2 text-gray-700 ">Email</label>
                         <input type="text" name="email" placeholder="abc@gmail.com" required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800">
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
                     </div>
                     <div class="mb-6">
-                        <label for="cellphone" class="block mb-2 text-gray-700 dark:text-gray-400">Cellphone
+                        <label for="cellphone" class="block mb-2 text-gray-700 ">Cellphone
                             Number</label>
                         <input type="text" name="cellphone" placeholder="+639-123456789" required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800">
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
                     </div>
                     <div class="mb-6">
-                        <label for="subject" class="block mb-2 text-gray-700 dark:text-gray-400">Subject</label>
+                        <label for="subject" class="block mb-2 text-gray-700 ">Subject</label>
                         <input type="text" name="subject" placeholder="I'm asking information for..."
                             required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 dark:bg-gray-800">
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
                     </div>
                     <div class="mb-6">
-                        <label for="message" class="block mb-2 text-gray-700 dark:text-gray-400">Message</label>
+                        <label for="message" class="block mb-2 text-gray-700 ">Message</label>
                         <textarea name="message" placeholder="Input any inquiries or clarifications" required=""
-                            class="block w-full px-4 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded dark:placeholder-gray-500 py-7 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800"></textarea>
+                            class="block w-full px-4 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded  py-7   "></textarea>
                     </div>
                     <button type="submit"
                         class="inline-flex justify-center items-center py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400">
