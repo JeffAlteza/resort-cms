@@ -14,19 +14,19 @@
                     <div class="mr-4 flex w-10 flex-col items-center md:w-24">
                         <div>
                             <div
-                                class="flex h-8 w-8 items-center justify-center rounded-full bg-green-200">
-                                <div class="h-4 w-4 rounded-full bg-green-600"></div>
+                                class="flex h-8 w-8 items-center justify-center rounded-full bg-sky-200">
+                                <div class="h-4 w-4 rounded-full bg-sky-600"></div>
                             </div>
                         </div>
-                        <div class="h-full w-px bg-green-300"></div>
+                        <div class="h-full w-px bg-sky-300"></div>
                     </div>
                     <div>
                         <h2
-                            class="mb-4 inline-block rounded-3xl bg-gradient-to-r from-green-500 to-green-600 px-4 py-2 text-sm font-medium text-white">
+                            class="mb-4 inline-block rounded-3xl bg-gradient-to-r from-sky-500 to-sky-600 px-4 py-2 text-sm font-medium text-white">
                             {{ \Carbon\Carbon::parse($timeline->date)->format('F j, Y') }}
                         </h2>
                         <div
-                            class="relative mb-10 flex-1 rounded-3xl border-b-4 border-green-200 bg-white shadow">
+                            class="relative mb-10 flex-1 rounded-3xl border-b-4 border-sky-200 bg-white shadow">
                             <div class="relative z-20 p-6">
                                 <p class="mb-2 text-xl font-bold text-gray-600 ">{{$timeline->title}}</p>
                                 <p class="text-gray-700 ">{{$timeline->description}}</p>

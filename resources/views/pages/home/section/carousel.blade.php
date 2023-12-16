@@ -44,7 +44,7 @@
 
         <!--Carousel controls - prev item-->
         <button
-            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-green-800 opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:opacity-100 hover:no-underline hover:outline-none motion-reduce:transition-none"
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-sky-800 opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:opacity-100 hover:no-underline hover:outline-none motion-reduce:transition-none"
             type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
             <span class="inline-block h-8 w-8">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -57,7 +57,7 @@
         </button>
         <!--Carousel controls - next item-->
         <button
-            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-green-800 opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:opacity-100 hover:no-underline  hover:outline-none motion-reduce:transition-none"
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-sky-800 opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:opacity-100 hover:no-underline  hover:outline-none motion-reduce:transition-none"
             type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
             <span class="inline-block h-8 w-8">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -71,7 +71,7 @@
     </div>
     <div class="flex justify-center">
         <a data-aos="fade-up" data-aos-duration="800" href="{{route('gallery')}}"
-            class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
+            class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-sky-600 rounded-lg bg-white border border-sky-600 hover:bg-sky-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
             View More
         </a>
     </div>

@@ -19,21 +19,21 @@ class FeedbackSeeder extends Seeder
                 'address' => 'Makati City, Philippines',
                 'occupation' => 'Manager',
                 'feedback' => 'Keep on jumping to get the most of the jump rope exercise. It will help you to increase your bone density as well',
-                'image' => 'martina11.jpg',
+                'image' => 'althea25.jpg',
             ],
             [
                 'name' => 'John Doe',
                 'address' => 'Makati City, Philippines',
                 'occupation' => 'Manager',
                 'feedback' => 'Keep on jumping to get the most of the jump rope exercise. It will help you to increase your bone density as well',
-                'image' => 'martina11.jpg',
+                'image' => 'althea25.jpg',
             ],
             [
                 'name' => 'John Doe',
                 'address' => 'Makati City, Philippines',
                 'occupation' => 'Manager',
                 'feedback' => 'Keep on jumping to get the most of the jump rope exercise. It will help you to increase your bone density as well',
-                'image' => 'martina11.jpg',
+                'image' => 'althea25.jpg',
             ],
         ]);
     }

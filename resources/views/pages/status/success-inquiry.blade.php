@@ -6,7 +6,7 @@
 </head>
 
 <body x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 0 ? true : false"
-    :class="{ 'scrolled': scrolled }" class="bg-green-600">
+    :class="{ 'scrolled': scrolled }" class="bg-sky-600">
     <header>
         @include('components.navbar')
     </header>

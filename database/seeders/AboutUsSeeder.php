@@ -17,8 +17,8 @@ class AboutUsSeeder extends Seeder
             [
                 [
                     'title' => 'About Us',
-                    'image' => 'martina21.jpg',
-                    'description' => 'Welcome to Martina, where our passion for creating exceptional moments meets 
+                    'image' => 'althea27.jpg',
+                    'description' => 'Welcome to Altheas Orchard, where our passion for creating exceptional moments meets 
             the epitome of luxury in resorts and event spaces. With an unwavering commitment to excellence, 
             we take pride in curating unparalleled experiences that transcend the ordinary. Nestled in 
             breathtaking locales, our resorts are designed to be sanctuaries of opulence, providing a 

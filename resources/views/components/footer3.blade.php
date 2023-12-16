@@ -1,5 +1,5 @@
 <section class="flex flex-col lg:justify-end font-poppins">
-    <div class="w-full bg-green-700">
+    <div class="w-full bg-sky-700">
         <div class="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-0">
             <div class="flex flex-wrap pt-6 pb-0 -mx-3">
                 <div class="w-full px-4 mb-11 md:w-1/2 lg:w-3/12 lg:mb-0">
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <div class="py-3 text-center text-gray-200 bg-green-700">
+        <div class="py-3 text-center text-gray-200 bg-sky-700">
             <span>© Copyright 2022 . All Rights Reserved</span>
         </div>
     </div>

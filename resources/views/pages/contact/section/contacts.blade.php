@@ -12,7 +12,7 @@
                     <div class="w-full px-4 mb-10 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-sky-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                     <path
@@ -29,7 +29,7 @@
                     <div class="w-full px-4 mb-10 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-sky-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                                     <path
@@ -46,7 +46,7 @@
                     <div class="w-full px-4 mb-10 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-sky-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                                     <path
@@ -64,7 +64,7 @@
                     <div class="w-full px-4 sm:w-1/2">
                         <div class="max-w-xs mx-auto">
                             <div
-                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-green-600 rounded-full">
+                                class="inline-flex items-center justify-center w-12 h-12 mb-6 text-gray-100 bg-sky-600 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
                                     <path
@@ -75,7 +75,7 @@
                             <h2 class="mb-4 text-lg font-bold leading-9 text-gray-700 md:text-2xl ">
                                 Social</h2>
                             <a href="{{ $contact['Facebook'] }}"
-                                class="inline-block mr-1 text-green-600  hover:text-green-700">
+                                class="inline-block mr-1 text-sky-600  hover:text-sky-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="w-6 h-6 bi bi-facebook" viewBox="0 0 16 16">
                                     <path
@@ -84,7 +84,7 @@
                                 </svg>
                             </a>
                             <a href="{{ $contact['Youtube'] }}"
-                                class="inline-block mr-1 text-green-500 hover:text-green-600 ">
+                                class="inline-block mr-1 text-sky-500 hover:text-sky-600 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="w-6 h-6 bi bi-youtube" viewBox="0 0 16 16">
                                     <path
@@ -92,7 +92,7 @@
                                 </svg>
                             </a>
                             <a href="{{ $contact['Instagram'] }}"
-                                class="inline-block mr-1 text-green-400  hover:text-green-600">
+                                class="inline-block mr-1 text-sky-400  hover:text-sky-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class=" w-6 h-6 bi bi-instagram" viewBox="0 0 16 16">
                                     <path
@@ -130,7 +130,7 @@
                             class="block w-full px-4 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded  py-7   "></textarea>
                     </div>
                     <button type="submit"
-                        class="inline-flex justify-center items-center py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400">
+                        class="inline-flex justify-center items-center py-2 px-5 text-lg  text-center text-sky-600 rounded-lg bg-white border border-sky-600 hover:bg-sky-600 hover:text-white focus:ring-4 focus:ring-gray-400">
                         Send
                     </button>
                 </form>

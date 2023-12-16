@@ -10,7 +10,7 @@
         </div> -->
         <div class="md:w-1/2 mb-1">
             <ul class="list-unstyled link">
-                <li><a href="#">Kalikasan Turismo Uno</a></li>
+                {{-- <li><a href="#">Kalikasan Turismo Uno</a></li> --}}
                 <li><a href="#">Tour Package</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>

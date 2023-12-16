@@ -1,4 +1,4 @@
-<div class="min-h-5/6 py-12 flex flex-col items-center justify-center bg-green-100">
+<div class="min-h-5/6 py-12 flex flex-col items-center justify-center bg-sky-100">
 
     <div class="min-h-5/6 flex items-center justify-center">
         <div class="text-center px-10 lg:px-36 mb-5">
@@ -19,12 +19,12 @@
             <div
                 class="flex flex-col rounded-xl bg-white shadow-lg transform transition-transform hover:translate-y-[-20px] duration-500">
                 <div class="h-[70%] rounded-t-xl text-center">
-                    <img src="{{ asset('image/photo.png') }}" alt="photo">
+                    <img src="{{ asset('image/Camping.png') }}" alt="photo">
                 </div>
                 <div class="h-[30%] rounded-b-xl p-4 pt-0 text-center">
-                    <h1 class="text-2xl  text-green-600 font-shippori">Scenery</h1>
+                    <h1 class="text-2xl  text-sky-600 font-shippori">Scenery</h1>
                     <p class="text-gray-700 text-md font-shippori">
-                        Amidst nature, our resort offers scenic views and lush green surroundings.
+                        Amidst nature, our resort offers scenic views and lush sky surroundings.
                     </p>
                 </div>
             </div>
@@ -35,12 +35,12 @@
             <div
                 class="flex flex-col rounded-xl bg-white shadow-lg transform transition-transform hover:translate-y-[-20px] duration-500">
                 <div class="h-[70%] rounded-t-xl text-center">
-                    <img src="{{ asset('image/safe.png') }}" alt="photo">
+                    <img src="{{ asset('image/Marriage.png') }}" alt="photo">
                 </div>
                 <div class="h-[30%] rounded-b-xl p-4 pt-0 text-center">
-                    <h1 class="text-2xl  text-green-600 font-shippori">Safety</h1>
+                    <h1 class="text-2xl  text-sky-600 font-shippori">Wedding</h1>
                     <p class="text-gray-700 text-md font-shippori">
-                        Nestled in nature, our resort prioritizes safety. With well-lit paths and 24/7 surveillance.
+                        Discover your dream wedding at our resort with enchanting ambiance.
                     </p>
                 </div>
             </div>
@@ -51,10 +51,10 @@
             <div
                 class="flex flex-col rounded-xl bg-white shadow-lg transform transition-transform hover:translate-y-[-20px] duration-500">
                 <div class="h-[70%] rounded-t-xl text-center">
-                    <img src="{{ asset('image/calm.png') }}" alt="photo">
+                    <img src="{{ asset('image/Enjoying-Life.png') }}" alt="photo">
                 </div>
                 <div class="h-[30%] rounded-b-xl p-4 pt-0 text-center">
-                    <h1 class="text-2xl  text-green-600 font-shippori">Calmness</h1>
+                    <h1 class="text-2xl  text-sky-600 font-shippori">Calmness</h1>
                     <p class="text-gray-700 text-md font-shippori">
                         Experience serenity in our resort, where the rustle of gentle breezes. Embrace nature.
                     </p>
@@ -65,7 +65,7 @@
 
     <!-- Button -->
     {{-- <a data-aos="fade-up" data-aos-duration="800" href="#next"
-        class="inline-flex justify-center items-center mt-5 py-2 px-4 text-md  text-center text-white rounded-full bg-green-600 border border-green-600 hover:bg-green-700 focus:ring-4 focus:ring-gray-400 shadow-md">
+        class="inline-flex justify-center items-center mt-5 py-2 px-4 text-md  text-center text-white rounded-full bg-sky-600 border border-sky-600 hover:bg-sky-700 focus:ring-4 focus:ring-gray-400 shadow-md">
         About Us
     </a> --}}
 </div>

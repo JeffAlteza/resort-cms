@@ -31,7 +31,7 @@
                             <h2 class="text-lg font-bold leading-9 text-black font">
                                 {{ $feedback->name }}</h2>
                             <span
-                                class="block text-xs font-semibold uppercase text-green-600">{{ $feedback->address }}</span>
+                                class="block text-xs font-semibold uppercase text-sky-600">{{ $feedback->address }}</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 class="absolute bottom-4 right-4 h-20 w-20 rotate-180 opacity-10" viewBox="0 0 16 16">
                                 <path

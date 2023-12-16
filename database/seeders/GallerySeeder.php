@@ -13,11 +13,11 @@ class GallerySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 1; $i <= 30; $i++) {
+        for ($i = 1; $i <= 34; $i++) {
             Gallery::create([
                 'title' => 'Gallery Photo',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac orci odio. Ut eu luctus est.',
-                'image' => "martina{$i}.jpg",
+                'image' => "althea{$i}.jpg",
                 'visibility' => true,
             ]);
         }

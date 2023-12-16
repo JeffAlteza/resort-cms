@@ -35,7 +35,7 @@
                 @if (\Illuminate\Support\Facades\Route::currentRouteName() != 'feature')
                     <div class="flex justify-center md:justify-start lg:justify-start">
                         <a data-aos="fade-up" data-aos-duration="800" href="#next"
-                            class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-green-600 rounded-lg bg-white border border-green-600 hover:bg-green-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
+                            class="inline-flex justify-center items-center mt-5 py-2 px-5 text-lg  text-center text-sky-600 rounded-lg bg-white border border-sky-600 hover:bg-sky-600 hover:text-white focus:ring-4 focus:ring-gray-400 ">
                             View More
                         </a>
                     </div>
