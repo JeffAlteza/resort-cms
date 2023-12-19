@@ -30,3 +30,6 @@ Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 
 Route::view('/success-inquiry', 'pages.status.success-inquiry')->name('success-inquiry');
+
+Route::view('/book', 'pages.book.book-index')->name('success-inquiry');
+
