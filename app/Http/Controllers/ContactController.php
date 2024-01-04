@@ -52,7 +52,7 @@ class ContactController extends Controller
         $recipient = User::all();
 
         Notification::make()
-            ->icon('heroicon-o-document-text')
+            ->icon('heroicon-o-envelope')
             ->iconColor('success')
             ->title('New Inquiry Notification from ' . $attributes['email'])
             ->body('Please check your email or go to the Inquiry page')

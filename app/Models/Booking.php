@@ -4,19 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Inquiry extends Model
+class Booking extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     protected $fillable = [
         'name',
         'email',
         'cellphone',
-        'subject',
-        'responded',
-        'message'
+        'checkin',
+        'checkout',
+        'message',
+        'status',
     ];
-
 }

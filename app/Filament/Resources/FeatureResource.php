@@ -53,7 +53,6 @@ class FeatureResource extends Resource
                                 "true" => "True",
                                 "false" => "False",
                             ])
-                            ->boolean()
                             ->default(true)
                             ->required(),
                     ])
