@@ -44,11 +44,10 @@ class BookingResource extends Resource
                     Section::make('Booking Status')->schema([
                         Forms\Components\Radio::make('status')
                             ->options([
-                                "true" => "True",
-                                "false" => "False",
+                                "new" => "New",
+                                "accept" => "Accept",
+                                "decline" => "Decline",
                             ])
-                            ->boolean()
-                            ->default(true)
                             ->required(),
                     ])->columnSpan(1),
                 ])
@@ -59,27 +58,25 @@ class BookingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('cellphone')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('cellphone'),
                 Tables\Columns\TextColumn::make('checkin')
-                    ->date()
-                    ->sortable(),
+                    ->date(),
                 Tables\Columns\TextColumn::make('checkout')
-                    ->date()
-                    ->sortable(),
+                    ->date(),
                 Tables\Columns\TextColumn::make('status')
-                    ->searchable(),
+                    ->colors([
+                        'warning' => 'new',
+                        'success' => 'accept',
+                        'danger' => 'decline',
+                    ])
+                    ->badge(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
