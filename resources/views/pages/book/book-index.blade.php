@@ -17,21 +17,17 @@
 
 <body x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 0 ? true : false"
     :class="{ 'scrolled': scrolled }">
-    {{-- <header>
+    <header>
         @include('components.navbar')
     </header>
 
     <section>
         @include('pages.gallery.section.banner')
-    </section> --}}
+    </section>
 
     @include('pages.book.component.book-form')
 
-    {{-- <section>
-        @include('components.book-now')
-    </section>
-
-    @include('components.footer3') --}}
+    @include('components.footer3')
 
     @include('components.script')
 </body>

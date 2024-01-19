@@ -4,6 +4,9 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BookingResource\Pages;
 use App\Filament\Resources\BookingResource\RelationManagers;
+use App\Filament\Resources\BookingResource\Widgets\CalendarBookingWidget;
+use App\Filament\Widgets\CalendarWidget;
+use App\Filament\Widgets\InquiryOverview;
 use App\Models\Booking;
 use Filament\Forms;
 use Filament\Forms\Components\Group;

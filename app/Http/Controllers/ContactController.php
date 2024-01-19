@@ -10,6 +10,7 @@ use App\Models\Inquiry;
 use App\Models\User;
 use Filament\Notifications\Notification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Env;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -33,16 +34,17 @@ class ContactController extends Controller
     public function sendInquiryMail(Request $request)
     {
         $attributes = $this->validate($request, [
+            'name' => 'nullable|string',
             'email' => 'nullable|email:filter',
             'cellphone' => 'nullable|string',
             'subject' => 'nullable|string',
             'message' => 'nullable|string',
         ]);
 
-        // dd($attributes);
-        Mail::to('jeffreyalteza03@gmail.com')->send(new InquiryEmail($attributes));
+        Mail::to(config('app.MAIL_TO'))->send(new InquiryEmail($attributes));
 
         Inquiry::create([
+            'name' => $attributes['name'],
             'email' => $attributes['email'],
             'cellphone' => $attributes['cellphone'],
             'subject' => $attributes['subject'],

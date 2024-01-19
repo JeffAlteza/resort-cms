@@ -21,7 +21,7 @@ class AboutUsController extends Controller
         $aboutUs = AboutUs::where('type', 'about us')->first();
         $timelines = AboutUs::where('type', 'timeline')->orderBy('date', 'desc')->get();
         $contacts = Contact::where('visibility', true)->whereIn('title', ['Cellphone', 'Email', 'Location', 'Facebook', 'Instagram', 'Youtube'])->pluck('description', 'title')->toArray();
-        // dd($banner);
+
         return [
             'banner' => $banner,
             'aboutUs' => $aboutUs,

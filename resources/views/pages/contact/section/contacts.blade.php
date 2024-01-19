@@ -108,6 +108,11 @@
                     class="p-6 bg-white  rounded-lg">
                     @csrf
                     <div class="mb-6">
+                        <label for="name" class="block mb-2 text-gray-700 ">Name</label>
+                        <input type="text" name="name" placeholder="Jose Dela Cruz" required=""
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
+                    </div>
+                    <div class="mb-6">
                         <label for="email" class="block mb-2 text-gray-700 ">Email</label>
                         <input type="text" name="email" placeholder="abc@gmail.com" required=""
                             class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">

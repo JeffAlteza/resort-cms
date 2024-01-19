@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\BookingResource\Pages;
 
 use App\Filament\Resources\BookingResource;
+use App\Filament\Widgets\CalendarWidget;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
@@ -16,4 +17,12 @@ class ListBookings extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            CalendarWidget::class
+        ];
+    }
+
 }

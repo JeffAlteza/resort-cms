@@ -10,7 +10,7 @@ class InquiryOverview extends BaseWidget
     protected function getStats(): array
     {
         return [
-            // 'test'
+            'test'
         ];
     }
 }

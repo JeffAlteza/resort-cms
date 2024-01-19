@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Pages\Backup;
+use App\Filament\Widgets\CalendarWidget;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -18,6 +19,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
 use ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin;
 
 class AdminPanelProvider extends PanelProvider
@@ -42,11 +44,13 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 // Widgets\AccountWidget::class,
-                // Widgets\FilamentInfoWidget::class,
+                // CalendarWidget::class,
             ])
             ->sidebarCollapsibleOnDesktop()
-            ->plugin(
-                FilamentSpatieLaravelBackupPlugin::make()->usingPage(Backup::class)
+            ->plugins([
+                FilamentSpatieLaravelBackupPlugin::make()->usingPage(Backup::class),
+                FilamentFullCalendarPlugin::make(),
+            ]
             )
             ->middleware([
                 EncryptCookies::class,
