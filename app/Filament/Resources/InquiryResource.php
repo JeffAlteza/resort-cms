@@ -5,11 +5,14 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\InquiryResource\Pages;
 use App\Models\Inquiry;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class InquiryResource extends Resource
 {
@@ -70,6 +73,22 @@ class InquiryResource extends Resource
             ->filters([
                 Tables\Filters\TrashedFilter::make()->native(false),
                 Tables\Filters\TernaryFilter::make('responded')->native(false),
+                Filter::make('created_at')
+                    ->form([
+                        DatePicker::make('created_from'),
+                        DatePicker::make('created_until'),
+                    ])
+                    ->query(function (Builder $query, array $data): Builder {
+                        return $query
+                            ->when(
+                                $data['created_from'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
+                            )
+                            ->when(
+                                $data['created_until'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
+                            );
+                    }),
             ])
             ->actions([
                 ActionGroup::make([

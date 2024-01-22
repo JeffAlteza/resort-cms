@@ -19,6 +19,8 @@
     
     @include('pages.contact.section.contacts')
 
+    @include('components.faq')
+
     <section>
         @include('components.book-now')
     </section>

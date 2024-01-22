@@ -1,4 +1,4 @@
-<section class="flex items-center bg-gray-100 lg:h-screen font-poppins  ">
+<section class="flex items-center bg-slate-100 lg:h-screen font-poppins  ">
     <div class="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto lg:py-11 md:px-6">
         <div class="mb-10 text-left">
             <h2 class="pb-2 mb-2 text-xl font-bold text-gray-800 md:text-3xl ">
@@ -105,34 +105,52 @@
             </div>
             <div class="w-full px-4 lg:w-1/2">
                 <form action="{{ route('inquiry-mail') }}" method="post"
-                    class="p-6 bg-white  rounded-lg">
+                    class="p-6 bg-white shadow rounded-lg">
                     @csrf
-                    <div class="mb-6">
-                        <label for="name" class="block mb-2 text-gray-700 ">Name</label>
-                        <input type="text" name="name" placeholder="Jose Dela Cruz" required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
+                    <div class="relative mb-3" data-te-input-wrapper-init>
+                        <input type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="name" name="name" placeholder="Form control lg" required/>
+                        <label for="name"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">
+                            Full Name
+                        </label>
                     </div>
-                    <div class="mb-6">
-                        <label for="email" class="block mb-2 text-gray-700 ">Email</label>
-                        <input type="text" name="email" placeholder="abc@gmail.com" required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
+                    <div class="relative mb-3" data-te-input-wrapper-init>
+                        <input type="email"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="email" name="email" placeholder="Form control lg" required/>
+                        <label for="email"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">
+                            Email
+                        </label>
                     </div>
-                    <div class="mb-6">
-                        <label for="cellphone" class="block mb-2 text-gray-700 ">Cellphone
-                            Number</label>
-                        <input type="text" name="cellphone" placeholder="+639-123456789" required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
+                    <div class="relative mb-3" data-te-input-wrapper-init>
+                        <input type="text"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="cellphone" name="cellphone" placeholder="Form control lg" required/>
+                        <label for="cellphone"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">
+                            Mobile Number
+                        </label>
                     </div>
-                    <div class="mb-6">
-                        <label for="subject" class="block mb-2 text-gray-700 ">Subject</label>
-                        <input type="text" name="subject" placeholder="I'm asking information for..."
-                            required=""
-                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded    ">
+                    <div class="relative mb-3" data-te-input-wrapper-init>
+                        <input type="subject"
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="subject" name="subject" placeholder="Form control lg" required/>
+                        <label for="subject"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">
+                            Subject
+                        </label>
                     </div>
-                    <div class="mb-6">
-                        <label for="message" class="block mb-2 text-gray-700 ">Message</label>
-                        <textarea name="message" placeholder="Input any inquiries or clarifications" required=""
-                            class="block w-full px-4 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded  py-7   "></textarea>
+                    <div class="relative mb-3" data-te-input-wrapper-init>
+                        <textarea
+                            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                            id="message" name="message" rows="4" placeholder="Your message"></textarea>
+                        <label for="message"
+                            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">
+                            Message
+                        </label>
                     </div>
                     <button type="submit"
                         class="inline-flex justify-center items-center py-2 px-5 text-lg  text-center text-sky-600 rounded-lg bg-white border border-sky-600 hover:bg-sky-600 hover:text-white focus:ring-4 focus:ring-gray-400">

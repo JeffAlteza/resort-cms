@@ -1,6 +1,6 @@
 import "./bootstrap";
 
-import { Modal, Ripple, Carousel, Input, Datepicker, initTE } from "tw-elements";
+import { Modal, Ripple, Carousel, Input, Datepicker,Dropdown, Collapse, initTE } from "tw-elements";
 
 initTE({
     Carousel,
@@ -8,4 +8,6 @@ initTE({
     Ripple,
     Input,
     Datepicker,
+    Dropdown,
+    Collapse,
 });

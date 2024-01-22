@@ -111,7 +111,7 @@
             </div>
         </div>
         <div class="py-3 text-center text-gray-200 bg-sky-700">
-            <span>© Copyright 2022 . All Rights Reserved</span>
+            <span>© Copyright {{}} . All Rights Reserved</span>
         </div>
     </div>
 </section>

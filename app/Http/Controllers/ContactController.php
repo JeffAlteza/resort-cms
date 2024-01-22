@@ -60,8 +60,7 @@ class ContactController extends Controller
             ->body('Please check your email or go to the Inquiry page')
             ->sendToDatabase($recipient);
 
-        $data = $this->getIndexData();
-        $data['success'] = true;
+        $data = $this->getIndexData() + ['success' => true, 'title' => 'Sample Title', 'description' => 'Sample description'];
 
         return view('pages.contact.contact-index', $data);
     }
