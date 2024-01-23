@@ -7,6 +7,7 @@ use App\Mail\InquiryEmail;
 use App\Models\Banner;
 use App\Models\Booking;
 use App\Models\Contact;
+use App\Models\faq;
 use App\Models\User;
 use Filament\Notifications\Notification;
 use Illuminate\Http\Request;
@@ -24,11 +25,15 @@ class BookingController extends Controller
     
     private function getIndexData()
     {
+        $book = Booking::where('status', 'accept')->get();
         $banner = Banner::where('type', 'book')->first();
+        $faq = faq::all();
         $contacts = Contact::where('visibility', true)->whereIn('title', ['Cellphone', 'Email', 'Location', 'Facebook', 'Instagram', 'Youtube'])->pluck('description', 'title')->toArray();
 
         return [
+            'book' => $book,
             'banner' => $banner,
+            'faq' => $faq,
             'contact' => $contacts,
         ];
     }

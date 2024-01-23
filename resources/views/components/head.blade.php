@@ -10,3 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter&family=Libre+Franklin&family=MonteCarlo&family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+{{-- Calendar --}}
+{{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
+<link rel="stylesheet" href="node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.css">

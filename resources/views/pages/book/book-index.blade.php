@@ -25,7 +25,11 @@
         @include('pages.gallery.section.banner')
     </section>
 
+    <div id="calendar"></div>
+
     @include('pages.book.component.book-form')
+    
+    @include('components.faq')
 
     @include('components.footer3')
 

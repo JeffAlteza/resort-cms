@@ -131,3 +131,17 @@
         }
     }
 </script>
+
+{{-- <script src="{{ mix('js/app.js') }}"></script> --}}
+<script src="node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const calendar = new VanillaCalendar('#calendar');
+        calendar.init();
+        // or use with input
+        // const calendarWithInput = new VanillaCalendar('#calendar-input', { input: true });
+        // calendarWithInput.init();
+    });
+</script>

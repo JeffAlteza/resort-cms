@@ -6,6 +6,7 @@ use App\Mail\InquiryEmail;
 use App\Mail\InquiryMail;
 use App\Models\Banner;
 use App\Models\Contact;
+use App\Models\faq;
 use App\Models\Inquiry;
 use App\Models\User;
 use Filament\Notifications\Notification;
@@ -24,10 +25,12 @@ class ContactController extends Controller
     private function getIndexData()
     {
         $banner = Banner::where('type', 'contact')->first();
+        $faq = faq::all();
         $contacts = Contact::where('visibility', true)->whereIn('title', ['Cellphone', 'Email', 'Location', 'Facebook', 'Instagram', 'Youtube'])->pluck('description', 'title')->toArray();
         return [
             'banner' => $banner,
             'contact' => $contacts,
+            'faq' => $faq,
         ];
     }
 
