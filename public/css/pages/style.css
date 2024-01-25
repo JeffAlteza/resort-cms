@@ -11,16 +11,16 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: transparent;
+    background: linear-gradient(rgba(31, 30, 30, 0.8), rgba(31, 30, 30, 0));
     color: white;
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
     z-index: 1000;
 }
 
 .navbar.scrolled {
-    background-color: white;
+    background: white;
     color: #1b1c1e;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar a {
@@ -83,7 +83,7 @@ body {
 
     .navbar {
         position: fixed;
-        background-color: white;
+        background: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for mobile view */
         color: #1b1c1e;
     }
