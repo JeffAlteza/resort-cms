@@ -25,13 +25,15 @@ class BookingController extends Controller
     
     private function getIndexData()
     {
-        $book = Booking::where('status', 'accept')->get();
+        $book = Booking::where('status', 'accept');
+        $checkin = $book->pluck('checkin')->toArray();
         $banner = Banner::where('type', 'book')->first();
         $faq = faq::all();
         $contacts = Contact::where('visibility', true)->whereIn('title', ['Cellphone', 'Email', 'Location', 'Facebook', 'Instagram', 'Youtube'])->pluck('description', 'title')->toArray();
 
         return [
             'book' => $book,
+            'checkin' => $checkin,
             'banner' => $banner,
             'faq' => $faq,
             'contact' => $contacts,

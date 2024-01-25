@@ -7,14 +7,12 @@
             <p class="text-sm text-gray-700">View Available Dates and Fill up the form </p>
         </div>
         <div class="flex flex-wrap ">
-            <div class="w-full px-4 lg:w-1/2 mb-11 lg:mb-0">
-                {{-- @include('pages.book.component.calendar') --}}
-                <div id="calendar"></div>
-                {{-- <input type="text" id="calendar-input"> --}}
+            <div class="w-full px-4 lg:w-1/2 mb-11 lg:mb-0 flex items-center justify-center">
+                <div class="border border-gray-400 shadow-sm" style="width: 500px; height: 450px;" id="calendar"></div>
             </div>
             <div class="w-full px-4 lg:w-1/2">
                 <form action="{{ route('book-mail') }}" method="post"
-                    class="p-6 bg-white shadow-sm rounded-lg border border-gray-400">
+                    class="p-6 bg-white shadow-sm rounded-xl border border-gray-400">
                     @csrf
                     <div class="relative mb-3" data-te-input-wrapper-init>
                         <input type="text"

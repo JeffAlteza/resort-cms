@@ -12,5 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter&family=Libre+Franklin&family=MonteCarlo&family=Shippori+Mincho&display=swap" rel="stylesheet">
 
 {{-- Calendar --}}
-{{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
-<link rel="stylesheet" href="node_modules/vanilla-calendar-pro/build/vanilla-calendar.min.css">
+<link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js" defer></script>
+{{-- 
+<link href="./vanilla-calendar.min.css" rel="stylesheet">
+<script src="./vanilla-calendar.min.js" defer></script> --}}
