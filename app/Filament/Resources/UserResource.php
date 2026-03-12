@@ -2,14 +2,18 @@
 
 namespace App\Filament\Resources;
 
+use BackedEnum;
+use UnitEnum;
+
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
+use Filament\Actions\ActionGroup;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Actions;
 use Filament\Tables;
-use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -18,13 +22,13 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-users';
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-users';
 
-    protected static ?string $navigationGroup = 'User Management';
+    protected static string | UnitEnum | null $navigationGroup = 'User Management';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
@@ -63,16 +67,16 @@ class UserResource extends Resource
             ])
             ->actions([
                 ActionGroup::make([
-                    Tables\Actions\ViewAction::make()->color('success'),
-                    Tables\Actions\EditAction::make()->color('primary'),
-                    Tables\Actions\DeleteAction::make()->color('danger'),
-                    Tables\Actions\RestoreAction::make(),
+                    Actions\ViewAction::make()->color('success'),
+                    Actions\EditAction::make()->color('primary'),
+                    Actions\DeleteAction::make()->color('danger'),
+                    Actions\RestoreAction::make(),
                 ])->icon('heroicon-m-ellipsis-horizontal')
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    // Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\RestoreBulkAction::make('restore'),
+                Actions\BulkActionGroup::make([
+                    // Actions\DeleteBulkAction::make(),
+                    Actions\RestoreBulkAction::make('restore'),
                 ]),
             ]);
     }
