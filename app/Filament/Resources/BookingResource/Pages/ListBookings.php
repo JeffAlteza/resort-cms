@@ -6,7 +6,7 @@ use App\Filament\Resources\BookingResource;
 use App\Filament\Widgets\CalendarWidget;
 use App\Traits\ExportToExcelTrait;
 use Filament\Actions;
-use Filament\Resources\Components\Tab;
+use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Resources\Pages\ListRecords;
 
 class ListBookings extends ListRecords
