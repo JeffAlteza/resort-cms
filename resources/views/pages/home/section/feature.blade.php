@@ -18,7 +18,7 @@
         <!-- Image Div -->
         <div
             class="lg:w-1/2 md:w-2/3 p-8 md:px-2 lg:px-0 lg:py-6 flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
-            <img data-aos="fade-up" data-aos-duration="800" src="{{ asset('storage/' . $featureData->image) }}"
+            <img data-aos="fade-up" data-aos-duration="800" src="{{ asset('image/' . $featureData->image) }}"
                 alt="Feature Image" class="rounded-3xl shadow-lg">
         </div>
 

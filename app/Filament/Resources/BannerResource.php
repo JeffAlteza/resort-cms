@@ -40,6 +40,7 @@ class BannerResource extends Resource
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
+                    ->disk(config('filesystems.default'))
                     ->image()
                     ->columnSpanFull()
                     ->required(),

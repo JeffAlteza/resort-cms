@@ -46,6 +46,7 @@ class GalleryResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
+                    ->disk(config('filesystems.default'))
                     ->image()
                     ->columnSpanFull()
                     ->required(),

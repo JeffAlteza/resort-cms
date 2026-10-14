@@ -25,7 +25,7 @@
                             <div
                                 class="mb-3 inline-block h-32 w-32 overflow-hidden rounded-full bg-blue-500 text-xs text-white">
                                 <img class="h-full w-full object-cover transition-all hover:scale-110"
-                                    src="{{ asset('storage/' . $feedback->image) }}" alt="" />
+                                    src="{{ asset('image/' . $feedback->image) }}" alt="" />
                             </div>
                             <p class="mb-4 text-base leading-7 text-gray-700">{{ $feedback->feedback }}</p>
                             <h2 class="text-lg font-bold leading-9 text-black font">

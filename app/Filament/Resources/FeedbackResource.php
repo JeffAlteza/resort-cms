@@ -43,6 +43,7 @@ class FeedbackResource extends Resource
                 Forms\Components\Textarea::make('feedback')
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
+                    ->disk(config('filesystems.default'))
                     ->image()
                     ->columnSpanFull(),
             ]);

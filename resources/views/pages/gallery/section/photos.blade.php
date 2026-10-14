@@ -16,7 +16,7 @@
                 <!-- Card with alternating sizes -->
                 <div class="mb-4 w-full px-2 lg:w-{{ $width }}">
                     <div data-aos="{{ $fade }}" data-aos-duration="800" class="group relative overflow-hidden rounded-2xl shadow-lg">
-                        <img src="{{ asset('storage/' . $galleryPhoto->image) }}"
+                        <img src="{{ asset('image/' . $galleryPhoto->image) }}"
                             class="inset-0 h-[350px] w-full object-cover object-center transition duration-500 group-hover:origin-center group-hover:scale-105"
                             alt="" />
                         <div class="absolute inset-0 z-0 opacity-60 group-hover:bg-gray-900"></div>

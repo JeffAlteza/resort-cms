@@ -53,6 +53,7 @@ class AboutUsResource extends Resource
                     ->hidden(fn (Get $get) => $get('type') != 'timeline')
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
+                    ->disk(config('filesystems.default'))
                     ->image()
                     ->columnSpanFull(),
             ]);

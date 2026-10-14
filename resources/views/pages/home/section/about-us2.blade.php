@@ -17,7 +17,7 @@
         <div class="flex flex-wrap">
             <div data-aos="fade-up" data-aos-duration="800" class="w-full lg:w-3/5 px-4 mb-10 lg:mb-0">
                 <div class="relative">
-                    <img src="{{ asset('storage/' . $aboutUs->image) }}" alt="About Us Image"
+                    <img src="{{ asset('image/' . $aboutUs->image) }}" alt="About Us Image"
                         class="relative z-40 object-cover w-full h-3/4 lg:rounded-tr-[80px] lg:rounded-bl-[80px] rounded">
                     <div
                         class="absolute z-10 hidden w-full h-full bg-sky-600 rounded-bl-[80px] rounded -bottom-6 right-6 lg:block">

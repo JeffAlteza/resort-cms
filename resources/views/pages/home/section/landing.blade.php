@@ -12,7 +12,7 @@
     }
 </style>
 
-<section style="background-image: url('{{ asset('storage/' . $banner['image']) }}');"
+<section style="background-image: url('{{ asset('image/' . $banner['image']) }}');"
     class="h-screen max-w-screen bg-center bg-no-repeat bg-cover bg-gray-700 flex items-center justify-center mx-auto">
     <div class="flex-col text-center text-white justify-center">
         <h1 data-aos="fade-up" data-aos-duration="1300" style="text-shadow: 2px 2px 4px rgb(40, 40, 40);"
