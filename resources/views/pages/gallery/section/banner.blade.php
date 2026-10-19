@@ -1,6 +1,6 @@
 <div class="h-[500px] py-10 lg:px-36 relative">
     <div class="bg-cover bg-center bg-fixed bg-no-repeat absolute inset-0"
-        style="background-image: url('{{ asset('image/'.$banner['image']) }}');"></div>
+        style="background-image: url('{{ asset('storage/'.$banner['image']) }}');"></div>
     <div class="flex flex-col items-center justify-center h-full relative z-10">
         <h1 class="text-white text-6xl  md:text-7xl lg:text-8xl mb-5 font-dancing" data-aos="fade" data-aos-duration="800"
             style="text-shadow: 1px 1px 2px rgb(100, 100, 100);">
