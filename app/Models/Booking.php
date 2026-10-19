@@ -18,4 +18,17 @@ class Booking extends Model
         'message',
         'status',
     ];
+
+    /**
+     * Find an accepted booking whose dates overlap the given range.
+     * Same overlap rule as the chatbot availability check.
+     */
+    public static function findAcceptedConflict(string $checkin, string $checkout, ?int $ignoreId = null): ?self
+    {
+        return static::where('status', 'accept')
+            ->when($ignoreId, fn ($query) => $query->where('id', '!=', $ignoreId))
+            ->where('checkin', '<', $checkout)
+            ->where('checkout', '>', $checkin)
+            ->first();
+    }
 }

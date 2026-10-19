@@ -31,7 +31,7 @@
                 <div class="relative float-left -mr-[100%] {{ $index !== 0 ? 'hidden' : '' }} w-full h-[600px] transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                     {{ $index === 0 ? 'data-te-carousel-active' : '' }} data-te-carousel-item 
                     style="backface-visibility: hidden">
-                    <img src="{{ asset('storage/' . $galleryPhoto->image) }}" class="object-cover w-full h-[600px]"
+                    <img src="{{ asset('image/' . $galleryPhoto->image) }}" class="object-cover w-full h-[600px]"
                         alt="{{ $galleryPhoto->alt_text }}" />
                     <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
                         <h5 class="text-xl">{{ $galleryPhoto->title }}</h5>

@@ -74,3 +74,28 @@ Defined in `app/Providers/Filament/AdminPanelProvider.php`:
 - `MAIL_TO` - custom env var for email recipient
 - Queue connection defaults to `sync` (no async processing)
 - Single MySQL database connection
+
+### n8n Telegram Chatbot
+- **Workflow:** "Resort CMS Telegram Chatbot" (n8n Cloud, `jeff-n8n-workflows.app.n8n.cloud`), ID `UweMKt2C70qu1GCg`, project "Jeff Alteza <jepoyalteza@gmail.com>"
+- **Flow:** Telegram Trigger → Normalize Telegram Input (Code) → Text Message? (IF, text only) → AI Agent → Telegram Send Message (Markdown). Non-text messages get "Unsupported Message Reply".
+- **Model:** Groq Chat Model `openai/gpt-oss-120b`, with Window Buffer Memory keyed by Telegram chat ID.
+- **AI Agent tools** (HTTP Request tools calling this app's API under `$vars.resort_url + /api/chatbot/...`, header `X-API-Key`):
+  - `Get Resort Info` → `/resort-info`
+  - `Get Features` → `/features`
+  - `Get Gallery` → `/gallery`
+  - `Get Feedback` → `/feedback`
+  - `Check Availability` → `/availability?checkin=&checkout=`
+  - `Create Booking` and `Create Inquiry` call the sub-workflow "Chatbot Submit (Booking & Inquiry)" (ID `vSNYtJUXdo2gyjxN`). It POSTs to `/bookings` or `/inquiries`, then sends an admin Telegram notification using `telegram_admin_chat_ID`.
+  - Read-only tools retry 3 times with a 10s timeout. Booking and inquiry tools do not retry, to avoid duplicate submissions.
+- **Telegram replies are plain text.** The system prompt forbids Markdown symbols.
+- **Credentials:** the chatbot HTTP nodes use the Header Auth credential "Header Auth account" (ID `4EgXqvhWmMKKQRRo`, header `X-API-Key`). The key must match the server's `N8N_API_KEY`.
+- **Booking validation:** `CreateBookingRequest` (Laravel) rejects check-in dates before today and check-out dates not after check-in.
+- **Booking rules in the system prompt:** collect details → validate dates (Asia/Manila) → check availability → show summary → explicit confirmation → create booking once. Never invent resort info.
+- **Error handling:** Error Trigger → Log Error to Google Sheets ("N8n Workflow Error Log") + Telegram admin alert. These exist in the **draft** only; the active version does not have them yet.
+- **Known issues (draft):**
+  - The published workflow may still be on an older version; check `activeVersionId` against the draft before assuming a change is live.
+  - Telegram admin alert uses the `telegram_admin_chat_ID` variable. The API key lives in the Header Auth credential.
+- **Server side:** `/api/chatbot/*` routes were added in commit `67a3c96`. The chatbot API key setting is `N8N_API_KEY` in `.env` (see `.env.example`).
+- **Editing:** edits go through the n8n MCP tools (`update_workflow`). Publishing affects production, so confirm before publishing.
+
+Before exploring the code, read `graphify-out/GRAPH_REPORT.md`, and use `graphify query` for structure questions.

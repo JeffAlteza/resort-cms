@@ -15,6 +15,7 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Group;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Schema;
 use Filament\Actions;
 use Filament\Tables;
@@ -56,7 +57,19 @@ class BookingResource extends Resource
                                 "accept" => "Accept",
                                 "decline" => "Decline",
                             ])
-                            ->required(),
+                            ->required()
+                            // Block accepting a booking whose dates overlap another accepted booking
+                            ->rule(fn (Get $get, ?Booking $record) => function (string $attribute, $value, \Closure $fail) use ($get, $record) {
+                                if ($value !== 'accept' || ! $get('checkin') || ! $get('checkout')) {
+                                    return;
+                                }
+
+                                $conflict = Booking::findAcceptedConflict($get('checkin'), $get('checkout'), $record?->id);
+
+                                if ($conflict) {
+                                    $fail("These dates overlap accepted booking #{$conflict->id} ({$conflict->name}, {$conflict->checkin} to {$conflict->checkout}).");
+                                }
+                            }),
                     ])->columnSpan(1),
                 ])
             ])->columns(3);

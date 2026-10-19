@@ -17,3 +17,9 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# graphify knowledge graph output
+/graphify-out
+
+# PHP language server helper files
+/storage/framework/lsp-*.php

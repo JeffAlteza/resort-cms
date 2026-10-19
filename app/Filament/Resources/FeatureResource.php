@@ -46,6 +46,7 @@ class FeatureResource extends Resource
                     Section::make('Image')->schema([
                         Forms\Components\FileUpload::make('image')
                             ->label('Upload Image')
+                            ->disk(config('filesystems.default'))
                             ->image()
                             ->required(),
                     ]),
