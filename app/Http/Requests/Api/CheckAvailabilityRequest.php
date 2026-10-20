@@ -14,7 +14,7 @@ class CheckAvailabilityRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'checkin' => 'required|date',
+            'checkin' => 'required|date|after_or_equal:' . now('Asia/Manila')->toDateString(),
             'checkout' => 'required|date|after:checkin',
         ];
     }

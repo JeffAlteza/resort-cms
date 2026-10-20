@@ -17,7 +17,7 @@ class CreateBookingRequest extends FormRequest
             'name' => 'required|string|max:255',
             'email' => 'required|email:filter',
             'cellphone' => 'required|string|max:20',
-            'checkin' => 'required|date|after_or_equal:today',
+            'checkin' => 'required|date|after_or_equal:' . now('Asia/Manila')->toDateString(),
             'checkout' => 'required|date|after:checkin',
             'message' => 'nullable|string',
         ];
